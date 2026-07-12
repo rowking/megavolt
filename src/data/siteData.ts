@@ -1,0 +1,411 @@
+export const COMPANY = {
+  brand: "UAE Approval Hub",
+  legal: "Megavolt Technical Services Co. LLC",
+  tagline: "Dubai's Trusted MEP & Authority Approval Specialists",
+  phone: "+971 56 596 6254",
+  whatsapp: "971565966254",
+  email: "info@uaeapprovalhub.com",
+  address: "12 22A St - Al Khabaisi, Port Saeed - Deira - Dubai",
+  trn: "100XXXXXXXXX",
+  license: "Dubai Licensed",
+  founded: "2015",
+  projects: "500+",
+  clients: "300+",
+  authorities: "15+",
+  years: "10+",
+};
+
+export const AUTHORITY_LOGOS = [
+  {
+    name: "Dubai Electricity & Water Authority (DEWA)",
+    short: "DEWA",
+    logo: "/assets/images/dewalogo2x.webp",
+  },
+  {
+    name: "Dubai Civil Defence (DCD)",
+    short: "DCD",
+    logo: "/assets/images/DCD.png",
+  },
+  {
+    name: "Dubai Municipality",
+    short: "DM",
+    logo: "/assets/images/DM.png",
+  },
+  {
+    name: "Dubai Development Authority",
+    short: "DDA",
+    logo: "/assets/images/DDA.png",
+  },
+  {
+    name: "Jebel Ali Free Zone Authority (JAFZA)",
+    short: "JAFZA",
+    logo: "/assets/images/Jafza.png",
+  },
+  {
+    name: "Roads & Transport Authority (RTA)",
+    short: "RTA",
+    logo: "/assets/images/RTA.png",
+  },
+  {
+    name: "Trakhees — Ports, Customs & Free Zone Corporation",
+    short: "Trakhees",
+    logo: "/assets/images/Trakhees.png",
+  },
+];
+
+export const SERVICES = [
+  {
+    category: "MEP Consultancy",
+    slug: "mep-consultancy",
+    icon: "Cpu",
+    description: "End-to-end MEP engineering consultancy services for residential, commercial, and industrial projects.",
+    items: [
+      { name: "Electrical Design", slug: "electrical-design" },
+      { name: "Mechanical Design", slug: "mechanical-design" },
+      { name: "Plumbing Design", slug: "plumbing-design" },
+      { name: "ELV Systems", slug: "elv-systems" },
+      { name: "Load Calculation", slug: "load-calculation" },
+      { name: "Shop Drawings", slug: "shop-drawings" },
+      { name: "As-Built Drawings", slug: "as-built-drawings" },
+    ],
+  },
+  {
+    category: "Authority Approvals",
+    slug: "authority-approvals",
+    icon: "ShieldCheck",
+    description: "Full authority approval management across all Dubai and UAE regulatory bodies.",
+    items: [
+      { name: "DEWA Approval", slug: "dewa-approval" },
+      { name: "Dubai Municipality", slug: "dubai-municipality" },
+      { name: "Dubai Civil Defence", slug: "dubai-civil-defence" },
+      { name: "RTA Approval", slug: "rta-approval" },
+      { name: "Trakhees", slug: "trakhees" },
+      { name: "JAFZA", slug: "jafza" },
+      { name: "Dubai South", slug: "dubai-south" },
+      { name: "Nakheel", slug: "nakheel" },
+      { name: "TECOM", slug: "tecom" },
+      { name: "DCD", slug: "dcd" },
+      { name: "Etisalat / e&", slug: "etisalat" },
+      { name: "du Telecom", slug: "du" },
+      { name: "Empower", slug: "empower" },
+      { name: "Emicool", slug: "emicool" },
+      { name: "District Cooling", slug: "district-cooling" },
+    ],
+  },
+  {
+    category: "MEP Contracting",
+    slug: "mep-contracting",
+    icon: "Wrench",
+    description: "Full-scope MEP installation and contracting services with certified engineers.",
+    items: [
+      { name: "Electrical Installation", slug: "electrical-installation" },
+      { name: "Mechanical Works", slug: "mechanical-works" },
+      { name: "Plumbing Works", slug: "plumbing-works" },
+      { name: "Fire Fighting", slug: "fire-fighting" },
+      { name: "Fire Alarm", slug: "fire-alarm" },
+      { name: "HVAC Systems", slug: "hvac" },
+      { name: "Testing & Commissioning", slug: "testing-commissioning" },
+      { name: "Annual Maintenance", slug: "annual-maintenance" },
+    ],
+  },
+  {
+    category: "Fit-out Services",
+    slug: "fit-out-services",
+    icon: "Building2",
+    description: "Premium commercial and residential fit-out solutions delivered on time and budget.",
+    items: [
+      { name: "Office Fit-out", slug: "office-fit-out" },
+      { name: "Restaurant Fit-out", slug: "restaurant-fit-out" },
+      { name: "Retail Fit-out", slug: "retail-fit-out" },
+      { name: "Warehouse Fit-out", slug: "warehouse-fit-out" },
+      { name: "Villa Renovation", slug: "villa-renovation" },
+      { name: "Interior Design", slug: "interior-design" },
+      { name: "Joinery", slug: "joinery" },
+    ],
+  },
+  {
+    category: "EV Solutions",
+    slug: "ev-solutions",
+    icon: "Zap",
+    description: "Complete EV charging infrastructure design, approval, and installation services.",
+    items: [
+      { name: "EV Charger Installation", slug: "ev-charger-installation" },
+      { name: "DEWA EV Approval", slug: "dewa-ev-approval" },
+      { name: "Commercial Charging", slug: "commercial-ev-charging" },
+      { name: "Residential Charging", slug: "residential-ev-charging" },
+      { name: "Load Upgrade", slug: "load-upgrade" },
+    ],
+  },
+  {
+    category: "Solar Solutions",
+    slug: "solar-solutions",
+    icon: "Sun",
+    description: "DEWA-approved solar PV design, permitting, and installation across Dubai.",
+    items: [
+      { name: "Solar PV Design", slug: "solar-pv-design" },
+      { name: "DEWA Solar Approval", slug: "dewa-solar-approval" },
+      { name: "Solar Installation", slug: "solar-installation" },
+    ],
+  },
+];
+
+export const INDUSTRIES = [
+  { name: "Warehouses & Logistics", slug: "warehouses", icon: "Warehouse", image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Corporate Offices", slug: "offices", icon: "Building2", image: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Villas & Residences", slug: "villas", icon: "Home", image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Hotels & Hospitality", slug: "hotels", icon: "Hotel", image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Hospitals & Healthcare", slug: "hospitals", icon: "Heart", image: "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Schools & Education", slug: "schools", icon: "GraduationCap", image: "https://images.pexels.com/photos/1580477/pexels-photo-1580477.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Retail & Showrooms", slug: "retail", icon: "ShoppingBag", image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Restaurants & F&B", slug: "restaurants", icon: "UtensilsCrossed", image: "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Factories & Industrial", slug: "factories", icon: "Factory", image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Data Centres", slug: "data-centres", icon: "Server", image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Government Buildings", slug: "government", icon: "Landmark", image: "https://images.pexels.com/photos/1537008/pexels-photo-1537008.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Mosques", slug: "mosques", icon: "Building", image: "https://images.pexels.com/photos/2187654/pexels-photo-2187654.jpeg?auto=compress&cs=tinysrgb&w=800" },
+];
+
+export const PROJECTS = [
+  {
+    id: 1,
+    title: "Emirates Post EV Charging Infrastructure",
+    slug: "emirates-post-ev-charging",
+    category: "EV Solutions",
+    location: "Multiple locations, Dubai",
+    scope: "Design, DEWA approval, and installation of 40 EV charging points across 8 postal facilities",
+    authorities: ["DEWA", "Dubai Municipality"],
+    image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
+    results: "Delivered within 6 weeks, 40 chargers operational, full DEWA compliance achieved",
+    tags: ["EV Charging", "DEWA Approval", "Commercial"],
+  },
+  {
+    id: 2,
+    title: "JAFZA Warehouse Power Upgrade",
+    slug: "jafza-warehouse-power-upgrade",
+    category: "MEP Contracting",
+    location: "JAFZA, Dubai",
+    scope: "3-phase power upgrade from 200A to 600A, new MDB, sub-distribution, earthing",
+    authorities: ["DEWA", "JAFZA"],
+    image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800",
+    results: "Upgrade completed in 10 days with zero production downtime",
+    tags: ["Power Upgrade", "JAFZA", "Warehouse"],
+  },
+  {
+    id: 3,
+    title: "Business Bay Corporate Office Fit-out",
+    slug: "business-bay-office-fit-out",
+    category: "Fit-out Services",
+    location: "Business Bay, Dubai",
+    scope: "2,500 sqft Grade-A office fit-out including MEP, joinery, glass partitions, and AV systems",
+    authorities: ["Dubai Municipality", "DCD"],
+    image: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800",
+    results: "Delivered in 45 days, fully compliant, client moved in ahead of schedule",
+    tags: ["Office Fit-out", "Business Bay", "MEP"],
+  },
+  {
+    id: 4,
+    title: "JLT Restaurant Civil Defence Approval",
+    slug: "jlt-restaurant-civil-defence",
+    category: "Authority Approvals",
+    location: "JLT, Dubai",
+    scope: "Complete DCD approval including fire alarm, fire fighting, emergency lighting, and NOC",
+    authorities: ["DCD", "Trakhees"],
+    image: "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800",
+    results: "DCD NOC obtained in 3 weeks, restaurant opened on schedule",
+    tags: ["DCD", "Restaurant", "Fire Alarm"],
+  },
+  {
+    id: 5,
+    title: "Jumeirah Villa Solar PV System",
+    slug: "jumeirah-villa-solar",
+    category: "Solar Solutions",
+    location: "Jumeirah, Dubai",
+    scope: "15kWp rooftop solar PV system with DEWA net metering approval",
+    authorities: ["DEWA"],
+    image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800",
+    results: "System live in 4 weeks, 70% reduction in electricity bill",
+    tags: ["Solar", "DEWA", "Residential"],
+  },
+  {
+    id: 6,
+    title: "Dubai South Logistics Hub MEP",
+    slug: "dubai-south-logistics-mep",
+    category: "MEP Consultancy",
+    location: "Dubai South",
+    scope: "Full MEP design package for 15,000 sqm logistics facility including shop drawings",
+    authorities: ["Dubai South", "DEWA"],
+    image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800",
+    results: "Design approved first submission, construction started on schedule",
+    tags: ["MEP Design", "Dubai South", "Industrial"],
+  },
+];
+
+export const TESTIMONIALS = [
+  {
+    name: "Ahmed Al Rashidi",
+    role: "Facilities Manager",
+    company: "Al Futtaim Group",
+    text: "UAE Approval Hub handled our entire DEWA application and electrical upgrade with zero complications. Professional, responsive, and delivered on time. Highly recommended.",
+    rating: 5,
+  },
+  {
+    name: "Sarah Thompson",
+    role: "CEO",
+    company: "Greenfield Hospitality",
+    text: "From DCD fire alarm approval to full restaurant fit-out, the team managed everything end-to-end. We opened 2 weeks early. Outstanding service.",
+    rating: 5,
+  },
+  {
+    name: "Mohammed Al Zaabi",
+    role: "Director of Operations",
+    company: "Gulf Star Logistics",
+    text: "Our JAFZA warehouse needed an urgent power upgrade. They mobilized the same week and completed the job with zero disruption to our operations. Exceptional team.",
+    rating: 5,
+  },
+  {
+    name: "Priya Nair",
+    role: "Project Manager",
+    company: "Pinnacle Real Estate",
+    text: "We rely on UAE Approval Hub for all our authority approvals across multiple projects. They know every authority's requirements inside out. Saves us weeks every time.",
+    rating: 5,
+  },
+];
+
+export const BLOG_POSTS = [
+  {
+    id: 1,
+    title: "How to Get DEWA Approval in Dubai: Complete 2024 Guide",
+    slug: "how-to-get-dewa-approval-dubai",
+    category: "Authority Approvals",
+    excerpt: "A step-by-step guide to obtaining DEWA approval for your electrical installation in Dubai, including required documents, timelines, and common pitfalls.",
+    image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800",
+    date: "2024-03-15",
+    readTime: "8 min read",
+  },
+  {
+    id: 2,
+    title: "Dubai Civil Defence Approval Process: What Every Business Owner Needs to Know",
+    slug: "dubai-civil-defence-approval-guide",
+    category: "Authority Approvals",
+    excerpt: "Complete breakdown of the DCD approval process for commercial premises, restaurants, warehouses, and offices in Dubai.",
+    image: "https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=800",
+    date: "2024-03-08",
+    readTime: "10 min read",
+  },
+  {
+    id: 3,
+    title: "EV Charger Installation Requirements in Dubai: DEWA Guidelines 2024",
+    slug: "ev-charger-installation-requirements-dubai",
+    category: "EV Solutions",
+    excerpt: "Everything you need to know about installing EV chargers in Dubai, from DEWA technical requirements to the approval process.",
+    image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
+    date: "2024-02-28",
+    readTime: "7 min read",
+  },
+  {
+    id: 4,
+    title: "Office Fit-out Approval in Dubai: Municipality & DCD Checklist",
+    slug: "office-fit-out-approval-dubai-checklist",
+    category: "Fit-out Services",
+    excerpt: "The authoritative checklist for getting Dubai Municipality and DCD approval for your office fit-out project.",
+    image: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800",
+    date: "2024-02-20",
+    readTime: "6 min read",
+  },
+  {
+    id: 5,
+    title: "Electrical Load Upgrade in Dubai: When Do You Need It and How to Get It",
+    slug: "electrical-load-upgrade-dubai",
+    category: "MEP Contracting",
+    excerpt: "Signs your Dubai property needs an electrical load upgrade, the DEWA process, costs, and timelines explained.",
+    image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800",
+    date: "2024-02-12",
+    readTime: "9 min read",
+  },
+  {
+    id: 6,
+    title: "Warehouse Fit-out Guide for Dubai & JAFZA: Approvals, MEP & Timeline",
+    slug: "warehouse-fit-out-guide-dubai-jafza",
+    category: "Fit-out Services",
+    excerpt: "A comprehensive guide to planning and executing a warehouse fit-out in Dubai, covering JAFZA requirements, MEP systems, and compliance.",
+    image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800",
+    date: "2024-02-05",
+    readTime: "11 min read",
+  },
+];
+
+export const FAQS = [
+  {
+    category: "DEWA",
+    questions: [
+      { q: "How long does DEWA approval take in Dubai?", a: "Standard DEWA approvals typically take 2–4 weeks from submission of complete documents. Complex or high-load applications may take 4–8 weeks. Our team ensures first-submission accuracy to minimize delays." },
+      { q: "What documents are required for DEWA approval?", a: "Required documents include: single-line diagram, load schedule, MEP drawings, trade license, title deed/NOC from developer, NOC from Dubai Municipality, and signed contractor forms. Specific requirements vary by project type." },
+      { q: "Can I install a DEWA-approved EV charger in my villa?", a: "Yes. DEWA allows EV charger installation in residential villas. You need a load assessment, DEWA-approved charger model, and a certified installer. We handle the full process from design to energization." },
+      { q: "What is the DEWA net metering scheme for solar?", a: "DEWA's Shams Dubai net metering program allows grid-connected solar PV systems to export surplus energy back to the grid, with credits applied to your electricity bill. Residential systems up to 200kWp and commercial up to unlimited are eligible." },
+    ],
+  },
+  {
+    category: "Dubai Civil Defence (DCD)",
+    questions: [
+      { q: "What requires DCD approval in Dubai?", a: "All commercial premises including offices, restaurants, warehouses, retail shops, hotels, and any building open to the public require DCD approval covering fire alarm systems, fire fighting systems, emergency lighting, and fire safety plans." },
+      { q: "How long does DCD approval take?", a: "DCD initial approval (NOC) typically takes 2–6 weeks depending on the size and complexity of the project and completeness of submissions. Our team's track record ensures minimal revision rounds." },
+      { q: "Do restaurants need a separate DCD approval?", a: "Yes. Restaurants require a specialized DCD approval covering kitchen suppression systems (hood systems), fire alarms, emergency exits, and fire extinguisher placement. Approval is mandatory before licensing." },
+    ],
+  },
+  {
+    category: "MEP & General",
+    questions: [
+      { q: "What is MEP in construction?", a: "MEP stands for Mechanical, Electrical, and Plumbing — the three core engineering systems in any building. MEP engineering covers design, installation, testing, and maintenance of HVAC, power distribution, water supply, drainage, and fire systems." },
+      { q: "Do I need an MEP consultant for my fit-out?", a: "For any commercial fit-out requiring authority approvals in Dubai, MEP drawings prepared by a registered UAE engineering firm are mandatory. We provide authority-ready MEP designs as part of our full approval service." },
+      { q: "How much does an MEP approval package cost in Dubai?", a: "Costs vary by project size, type, and authorities involved. A standard office fit-out MEP approval package starts from AED 8,000. Contact us for a free scope assessment and quotation within 24 hours." },
+    ],
+  },
+  {
+    category: "EV Charging",
+    questions: [
+      { q: "Which EV chargers are approved by DEWA?", a: "DEWA maintains an approved list of EV charger models. Generally, chargers must be IEC 62196 compliant (Type 2), have smart metering capability for commercial installations, and meet DEWA technical specifications. We supply and install only DEWA-approved chargers." },
+      { q: "How many EV chargers can I install in my building?", a: "This depends on your available electrical load (kVA). Our team conducts a load assessment and advises on the number of chargers achievable without a load upgrade, or plans a load upgrade if needed." },
+    ],
+  },
+];
+
+export const RESOURCES = [
+  { title: "DEWA Approval Checklist 2024", description: "Complete document checklist for DEWA electrical connection and NOC applications", type: "PDF Checklist", icon: "FileCheck" },
+  { title: "DCD Fire Safety Approval Guide", description: "Step-by-step guide to obtaining Civil Defence NOC for commercial premises", type: "PDF Guide", icon: "Shield" },
+  { title: "Office Fit-out Planning Template", description: "Free timeline and scope planning template for Dubai office fit-out projects", type: "Excel Template", icon: "Table" },
+  { title: "Electrical Load Calculator", description: "Interactive tool to calculate your building's electrical load requirements", type: "Online Tool", icon: "Calculator" },
+  { title: "Authority Approvals Directory", description: "Contact details, requirements, and timelines for all major Dubai authorities", type: "PDF Directory", icon: "BookOpen" },
+  { title: "EV Charger Specification Guide", description: "Technical requirements for EV charger installation in Dubai (DEWA compliant)", type: "PDF Guide", icon: "Zap" },
+];
+
+export const TEAM = [
+  { name: "Eng. Khalid Al Mansoori", role: "Managing Director", credential: "BEng Electrical, UAE Licensed", image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" },
+  { name: "Eng. Rajesh Kumar", role: "Head of MEP Design", credential: "MEng Mechanical, 15+ yrs UAE experience", image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" },
+  { name: "Eng. Sara Al Hashimi", role: "Authority Approvals Manager", credential: "BEng Civil, DEWA & DCD Specialist", image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400" },
+  { name: "Eng. Mohammed Farooq", role: "EV & Solar Lead Engineer", credential: "BEng Electrical, IEC & DEWA Certified", image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400" },
+];
+
+export const LOCATIONS = [
+  { city: "Dubai", slug: "dubai", description: "Our headquarters and primary service area covering all of Dubai." },
+  { city: "Abu Dhabi", slug: "abu-dhabi", description: "Full MEP and approval services across Abu Dhabi and Al Ain." },
+  { city: "Sharjah", slug: "sharjah", description: "MEP contracting and authority approval services in Sharjah." },
+  { city: "JAFZA", slug: "jafza", description: "Specialized JAFZA industrial MEP and compliance services." },
+  { city: "Dubai South", slug: "dubai-south", description: "Dubai South freezone MEP, logistics, and approval specialists." },
+  { city: "Business Bay", slug: "business-bay", description: "Corporate office MEP, fit-out, and DM approval services." },
+];
+
+export const CERTIFICATIONS = [
+  "DEWA Registered Contractor",
+  "Dubai Municipality Approved",
+  "Dubai Civil Defence Listed",
+  "Trakhees Registered",
+  "ISO 9001:2015 Certified",
+  "OSHAD / OSHA Compliant",
+  "Dubai Licensed Engineering Firm",
+];
+
+export const STATS = [
+  { label: "Projects Completed", value: "500+", icon: "CheckCircle" },
+  { label: "Happy Clients", value: "300+", icon: "Users" },
+  { label: "Authority Bodies", value: "15+", icon: "ShieldCheck" },
+  { label: "Years Experience", value: "10+", icon: "Award" },
+];
