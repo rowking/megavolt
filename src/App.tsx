@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -64,6 +65,7 @@ export default function App() {
         <Footer />
         <WhatsAppButton />
       </div>
+      <Analytics />
     </BrowserRouter>
   );
 }
