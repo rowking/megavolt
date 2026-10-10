@@ -98,8 +98,7 @@ export function LocationDetail() {
           <p className="text-slate-600 text-lg leading-relaxed mb-6">
             We provide full MEP engineering, authority approval management, contracting, fit-out,
             EV charging, and solar services in {location.city}. Our local team understands the
-            specific requirements of authorities in this area and has a proven track record of
-            first-submission approvals.
+            specific requirements of authorities in this area.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Services Available in {location.city}</h2>
@@ -120,8 +119,7 @@ export function LocationDetail() {
             {[
               `Local team with ${location.city}-specific authority knowledge`,
               "Fast response — 24 hours or less",
-              "Registered with all relevant UAE authorities",
-              "500+ projects delivered across the UAE",
+              "DEWA registered contractor",
               "Transparent pricing and honest timelines",
             ].map((point, i) => (
               <div key={i} className="flex items-start gap-2">

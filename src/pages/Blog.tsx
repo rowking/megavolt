@@ -136,7 +136,7 @@ export function BlogDetail() {
               UH
             </div>
             <div>
-              <div className="font-bold text-slate-900">UAE Approval Hub Team</div>
+              <div className="font-bold text-slate-900">Megavolt Engineering Team</div>
               <div className="text-sm text-slate-500">Licensed UAE MEP Engineers</div>
             </div>
           </div>
@@ -171,21 +171,20 @@ export function BlogDetail() {
             <p className="text-slate-600 leading-relaxed">
               The typical approval process involves several stages: document preparation, submission,
               authority review, site inspection, and final approval. Each authority has its own
-              timeline and specific requirements. Working with an experienced team ensures first-submission
-              accuracy and minimizes delays.
+              timeline and specific requirements. Complete, accurate documents from the start
+              help avoid delays.
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Common Pitfalls to Avoid</h2>
             <p className="text-slate-600 leading-relaxed">
               The most common reasons for approval delays are incomplete documentation, drawings that
               don't meet authority standards, missing NOCs from other authorities, and failing site
-              inspections. Our team has a first-submission approval track record because we address
-              these issues before submission.
+              inspections. We check for these issues before every submission.
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">How We Can Help</h2>
             <p className="text-slate-600 leading-relaxed">
-              UAE Approval Hub handles the entire process end-to-end — from initial assessment and
+              Megavolt handles the entire process end-to-end — from initial assessment and
               engineering design to authority submission, inspection coordination, and final approval.
               Contact us for a free consultation and we'll assess your specific requirements.
             </p>

@@ -41,7 +41,7 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-amber-400 font-medium">{COMPANY.authorities} Authorities Approved</span>
+            <span className="text-amber-400 font-medium">{COMPANY.authorities} Authorities Covered</span>
             <span className="text-slate-600">|</span>
             <span>Dubai Licensed</span>
           </div>
@@ -65,10 +65,10 @@ export default function Header() {
               />
               <div>
                 <div className="font-bold text-slate-900 text-lg leading-none" style={{ fontFamily: 'Montserrat' }}>
-                  UAE Approval Hub
+                  Megavolt
                 </div>
                 <div className="text-xs text-slate-500 mt-0.5 leading-tight">
-                  Powered by {COMPANY.legal}
+                  Technical Services Co. LLC
                 </div>
               </div>
             </Link>

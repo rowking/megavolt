@@ -1,18 +1,15 @@
 export const COMPANY = {
-  brand: "UAE Approval Hub",
+  brand: "Megavolt Technical Services",
   legal: "Megavolt Technical Services Co. LLC",
   tagline: "Dubai's Trusted MEP & Authority Approval Specialists",
   phone: "+971 56 596 6254",
   whatsapp: "971565966254",
-  email: "info@uaeapprovalhub.com",
+  email: "info@megavolt.ae",
   address: "12 22A St - Al Khabaisi, Port Saeed - Deira - Dubai",
   trn: "100XXXXXXXXX",
   license: "Dubai Licensed",
-  founded: "2015",
-  projects: "500+",
-  clients: "300+",
+  founded: "2020",
   authorities: "15+",
-  years: "10+",
 };
 
 export const AUTHORITY_LOGOS = [
@@ -166,18 +163,6 @@ export const INDUSTRIES = [
 
 export const PROJECTS = [
   {
-    id: 1,
-    title: "Emirates Post EV Charging Infrastructure",
-    slug: "emirates-post-ev-charging",
-    category: "EV Solutions",
-    location: "Multiple locations, Dubai",
-    scope: "Design, DEWA approval, and installation of 40 EV charging points across 8 postal facilities",
-    authorities: ["DEWA", "Dubai Municipality"],
-    image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "Delivered within 6 weeks, 40 chargers operational, full DEWA compliance achieved",
-    tags: ["EV Charging", "DEWA Approval", "Commercial"],
-  },
-  {
     id: 2,
     title: "JAFZA Warehouse Power Upgrade",
     slug: "jafza-warehouse-power-upgrade",
@@ -239,36 +224,7 @@ export const PROJECTS = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: "Ahmed Al Rashidi",
-    role: "Facilities Manager",
-    company: "Al Futtaim Group",
-    text: "UAE Approval Hub handled our entire DEWA application and electrical upgrade with zero complications. Professional, responsive, and delivered on time. Highly recommended.",
-    rating: 5,
-  },
-  {
-    name: "Sarah Thompson",
-    role: "CEO",
-    company: "Greenfield Hospitality",
-    text: "From DCD fire alarm approval to full restaurant fit-out, the team managed everything end-to-end. We opened 2 weeks early. Outstanding service.",
-    rating: 5,
-  },
-  {
-    name: "Mohammed Al Zaabi",
-    role: "Director of Operations",
-    company: "Gulf Star Logistics",
-    text: "Our JAFZA warehouse needed an urgent power upgrade. They mobilized the same week and completed the job with zero disruption to our operations. Exceptional team.",
-    rating: 5,
-  },
-  {
-    name: "Priya Nair",
-    role: "Project Manager",
-    company: "Pinnacle Real Estate",
-    text: "We rely on UAE Approval Hub for all our authority approvals across multiple projects. They know every authority's requirements inside out. Saves us weeks every time.",
-    rating: 5,
-  },
-];
+export const TESTIMONIALS: { name: string; role: string; company: string; text: string; rating: number }[] = [];
 
 export const BLOG_POSTS = [
   {
@@ -337,7 +293,7 @@ export const FAQS = [
   {
     category: "DEWA",
     questions: [
-      { q: "How long does DEWA approval take in Dubai?", a: "Standard DEWA approvals typically take 2–4 weeks from submission of complete documents. Complex or high-load applications may take 4–8 weeks. Our team ensures first-submission accuracy to minimize delays." },
+      { q: "How long does DEWA approval take in Dubai?", a: "Standard DEWA approvals typically take 2–4 weeks from submission of complete documents. Complex or high-load applications may take 4–8 weeks. Complete, accurate documents are the best way to avoid delays." },
       { q: "What documents are required for DEWA approval?", a: "Required documents include: single-line diagram, load schedule, MEP drawings, trade license, title deed/NOC from developer, NOC from Dubai Municipality, and signed contractor forms. Specific requirements vary by project type." },
       { q: "Can I install a DEWA-approved EV charger in my villa?", a: "Yes. DEWA allows EV charger installation in residential villas. You need a load assessment, DEWA-approved charger model, and a certified installer. We handle the full process from design to energization." },
       { q: "What is the DEWA net metering scheme for solar?", a: "DEWA's Shams Dubai net metering program allows grid-connected solar PV systems to export surplus energy back to the grid, with credits applied to your electricity bill. Residential systems up to 200kWp and commercial up to unlimited are eligible." },
@@ -395,17 +351,12 @@ export const LOCATIONS = [
 
 export const CERTIFICATIONS = [
   "DEWA Registered Contractor",
-  "Dubai Municipality Approved",
-  "Dubai Civil Defence Listed",
-  "Trakhees Registered",
-  "ISO 9001:2015 Certified",
-  "OSHAD / OSHA Compliant",
-  "Dubai Licensed Engineering Firm",
+  "Dubai Licensed Company",
 ];
 
 export const STATS = [
-  { label: "Projects Completed", value: "500+", icon: "CheckCircle" },
-  { label: "Happy Clients", value: "300+", icon: "Users" },
-  { label: "Authority Bodies", value: "15+", icon: "ShieldCheck" },
-  { label: "Years Experience", value: "10+", icon: "Award" },
+  { label: "In Business Since", value: "2020", icon: "Award" },
+  { label: "DEWA Registered Contractor", value: "DEWA", icon: "ShieldCheck" },
+  { label: "Authorities We Work With", value: "15+", icon: "CheckCircle" },
+  { label: "Support Available", value: "24/7", icon: "Users" },
 ];
