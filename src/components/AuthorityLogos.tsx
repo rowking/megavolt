@@ -9,10 +9,10 @@ export default function AuthorityLogos({ dark = false }: { dark?: boolean }) {
             Registered &amp; Approved
           </p>
           <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-white" : "text-slate-900"}`} style={{ fontFamily: 'Montserrat' }}>
-            Authorised by Dubai's Leading Regulatory Bodies
+            Authorities We Work With
           </h3>
           <p className={`text-sm mt-2 ${dark ? "text-slate-400" : "text-slate-500"}`}>
-            We are officially registered, approved, and listed with every major UAE authority.
+            We prepare and follow up submissions with these Dubai and UAE authorities.
           </p>
         </div>
 

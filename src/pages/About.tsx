@@ -1,19 +1,14 @@
 import {
   Target, Eye, ShieldCheck, Award, Users,
-  CheckCircle, Star, TrendingUp, Building2, Zap,
+  CheckCircle, TrendingUp, Building2,
 } from "lucide-react";
-import { COMPANY, TEAM, CERTIFICATIONS, STATS } from "../data/siteData";
+import { COMPANY, CERTIFICATIONS, STATS } from "../data/siteData";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 import AuthorityLogos from "../components/AuthorityLogos";
 
 const timeline = [
-  { year: "2015", event: "Founded in Dubai as Megavolt Technical Services", icon: Building2 },
-  { year: "2017", event: "Registered with DEWA and Dubai Municipality", icon: ShieldCheck },
-  { year: "2019", event: "Expanded into MEP contracting and fit-out services", icon: TrendingUp },
-  { year: "2021", event: "Launched EV charging division — 100+ chargers installed", icon: Zap },
-  { year: "2023", event: "Solar PV division launched with DEWA Shams Dubai approval", icon: Star },
-  { year: "2024", event: "500+ projects delivered, 300+ clients served", icon: Award },
+  { year: "2020", event: "Megavolt Technical Services founded in Dubai", icon: Building2 },
 ];
 
 const values = [
@@ -39,12 +34,12 @@ export default function About() {
           <Breadcrumbs items={[{ label: "About Us" }]} />
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
-              About UAE Approval Hub
+              About Megavolt Technical Services
             </h1>
             <p className="text-lg text-slate-300">
-              A Dubai-based MEP engineering and authority approvals firm, powered by {COMPANY.legal}.
-              Since {COMPANY.founded}, we've been the trusted partner for businesses navigating
-              the UAE's complex regulatory landscape.
+              {COMPANY.legal} is a Dubai-based electrical and MEP contracting company, working
+              since {COMPANY.founded}. Our authority approvals service is offered under the UAE
+              Approval Hub brand.
             </p>
           </div>
         </div>
@@ -124,17 +119,15 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
-              <h2 className="section-heading mt-2">The Approval Hub Advantage</h2>
+              <h2 className="section-heading mt-2">Why Customers Choose Megavolt</h2>
               <div className="space-y-4 mt-8">
                 {[
-                  "Registered with 15+ UAE authorities including DEWA, DCD, DM, Trakhees, JAFZA",
-                  "First-submission approval track record — we get it right the first time",
-                  "Licensed UAE engineering firm with in-house MEP design team",
+                  "DEWA registered contractor",
+                  "Submissions to DEWA, DM, Civil Defence, RTA and free zone authorities",
+                  "In-house electrical design and drawings",
                   "Full-service: design, approval, installation, testing, and maintenance",
                   "Transparent pricing with no hidden costs or surprise charges",
-                  "24-hour response guarantee on all enquiries",
-                  "ISO 9001 quality management certified",
-                  "10+ years of Dubai-specific regulatory experience",
+                  "Available 24/7 for urgent electrical work",
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <CheckCircle size={22} className="text-amber-500 flex-shrink-0 mt-0.5" />
@@ -154,36 +147,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Our Team</span>
-            <h2 className="section-heading mt-2">Meet Our Leadership</h2>
-            <p className="section-subheading mx-auto text-center">
-              Licensed engineers with decades of combined UAE experience.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TEAM.map((member, i) => (
-              <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100">
-                <div className="aspect-square overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-slate-900">{member.name}</h3>
-                  <div className="text-amber-600 text-sm font-medium">{member.role}</div>
-                  <div className="text-xs text-slate-500 mt-1">{member.credential}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Timeline */}
       <section className="py-16 bg-white">
@@ -240,11 +203,11 @@ export default function About() {
               <ShieldCheck size={32} className="text-amber-400 mb-4" />
               <h3 className="text-2xl font-bold mb-3">Safety First</h3>
               <p className="text-slate-300 leading-relaxed mb-4">
-                Every project follows strict OSHAD and Dubai Municipality safety protocols.
-                Our site teams are OSHA-certified and undergo regular safety training.
+                Every site follows Dubai Municipality safety requirements, with method statements,
+                risk assessments and proper PPE.
               </p>
               <div className="space-y-2">
-                {["Zero lost-time incidents in 3+ years", "Daily site safety inspections", "Full PPE compliance", "Method statements & risk assessments"].map((item, i) => (
+                {["Daily site safety inspections", "Full PPE compliance", "Method statements & risk assessments"].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-slate-300">
                     <CheckCircle size={16} className="text-amber-400" /> {item}
                   </div>
@@ -255,11 +218,11 @@ export default function About() {
               <Award size={32} className="mb-4" />
               <h3 className="text-2xl font-bold mb-3">Quality Assured</h3>
               <p className="text-slate-800 leading-relaxed mb-4">
-                ISO 9001:2015 certified quality management. Every drawing, installation, and
-                approval is reviewed by our senior engineering team before submission.
+                Every drawing, installation, and approval package is checked by our engineers
+                before it is submitted.
               </p>
               <div className="space-y-2">
-                {["ISO 9001:2015 quality management", "Peer-reviewed engineering designs", "Material compliance verification", "Post-installation testing & commissioning"].map((item, i) => (
+                {["Peer-reviewed engineering designs", "Material compliance verification", "Post-installation testing & commissioning"].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-slate-800">
                     <CheckCircle size={16} /> {item}
                   </div>

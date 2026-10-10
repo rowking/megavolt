@@ -3,6 +3,7 @@ import { TESTIMONIALS } from "../data/siteData";
 
 export default function Testimonials({ limit }: { limit?: number }) {
   const testimonials = limit ? TESTIMONIALS.slice(0, limit) : TESTIMONIALS;
+  if (testimonials.length === 0) return null;
 
   return (
     <section className="py-16 bg-slate-50">
@@ -11,7 +12,7 @@ export default function Testimonials({ limit }: { limit?: number }) {
           <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
           <h2 className="section-heading mt-2">What Our Clients Say</h2>
           <p className="section-subheading mx-auto text-center">
-            Trusted by 300+ businesses across Dubai and the wider UAE.
+            What our customers say about working with us.
           </p>
         </div>
 

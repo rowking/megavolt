@@ -60,14 +60,15 @@ export default function Footer() {
               />
               <div>
                 <div className="font-bold text-white text-lg" style={{ fontFamily: 'Montserrat' }}>
-                  UAE Approval Hub
+                  Megavolt
                 </div>
-                <div className="text-xs text-slate-400">Powered by {COMPANY.legal}</div>
+                <div className="text-xs text-slate-400">Technical Services Co. LLC</div>
               </div>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Dubai's trusted MEP engineering, authority approvals, and fit-out specialist.
-              Serving the UAE since {COMPANY.founded}.
+              Electrical and MEP contracting in Dubai since {COMPANY.founded}. DEWA registered
+              contractor. Authority approvals through{" "}
+              <a href="https://www.uaeapprovalhub.com/" className="text-amber-400 hover:underline">UAE Approval Hub</a>.
             </p>
             <div className="flex gap-3 mt-4">
               {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (

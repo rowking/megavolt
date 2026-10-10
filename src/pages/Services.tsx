@@ -215,9 +215,9 @@ export function ServiceDetail() {
             <p className="text-slate-600 text-lg leading-relaxed">
               Our {item.name} service is part of our {cat.category} division. We provide
               end-to-end solutions for residential, commercial, and industrial projects across
-              Dubai and the wider UAE. With {COMPANY.years} of experience and registration with
-              {COMPANY.authorities} UAE authorities, we ensure your project meets every regulatory
-              requirement — first time, every time.
+              Dubai and the wider UAE. As a DEWA registered contractor working with
+              {COMPANY.authorities} UAE authorities, we prepare complete, authority-ready
+              submissions to avoid delays.
             </p>
 
             <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">What We Deliver</h2>
@@ -242,10 +242,9 @@ export function ServiceDetail() {
             <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why Choose Us for {item.name}</h2>
             <ul className="space-y-2 text-slate-600">
               <li>UAE-licensed engineers with deep regulatory knowledge</li>
-              <li>First-submission approval track record</li>
+              <li>DEWA registered contractor</li>
               <li>Transparent pricing with no hidden costs</li>
               <li>Full project management from design to handover</li>
-              <li>ISO 9001 quality management certified</li>
               <li>Response within 24 hours on all enquiries</li>
             </ul>
 

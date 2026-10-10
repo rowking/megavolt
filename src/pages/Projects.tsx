@@ -21,7 +21,7 @@ export function ProjectsOverview() {
             Our Projects
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
-            500+ projects delivered across Dubai. From DEWA approvals to full MEP fit-outs,
+            From DEWA approvals to MEP fit-outs,
             see how we've helped businesses get compliant and stay operational.
           </p>
         </div>

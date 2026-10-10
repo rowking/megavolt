@@ -35,7 +35,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-20 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm border border-amber-400/30 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <Sparkles size={16} /> {COMPANY.authorities} UAE Authorities Approved
+              <Sparkles size={16} /> {COMPANY.authorities} UAE Authorities Covered
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6 animate-fade-in-up" style={{ fontFamily: 'Montserrat', animationDelay: '0.2s' }}>
               Dubai's Trusted <span className="gradient-text">MEP & Authority Approval</span> Specialists
@@ -90,21 +90,21 @@ export default function Home() {
               </h2>
               <p className="text-slate-600 text-lg mt-6 leading-relaxed">
                 {COMPANY.brand} ({COMPANY.legal}) is a Dubai-based MEP engineering and
-                authority approvals firm serving the UAE since {COMPANY.founded}. We've
-                delivered {COMPANY.projects} projects across residential, commercial, and
-                industrial sectors — from single-villa DEWA approvals to full warehouse MEP
-                fit-outs.
+                authority approvals firm serving the UAE since {COMPANY.founded}. We work on residential, commercial, and
+                industrial projects — from single-villa DEWA approvals to warehouse power
+                upgrades and MEP fit-outs.
               </p>
               <p className="text-slate-600 text-lg mt-4 leading-relaxed">
-                Our engineers are registered with every major Dubai authority. We don't just
-                design and install — we get you approved, fast.
+                We are a DEWA registered contractor and prepare submissions for DEWA, Dubai
+                Municipality, Civil Defence, RTA and free zone authorities. We design, install
+                and handle the approvals in one place.
               </p>
               <div className="grid grid-cols-2 gap-4 mt-8">
                 {[
-                  "Registered with DEWA, DCD, DM, Trakhees & more",
-                  "Licensed UAE engineering firm",
-                  "First-submission approval track record",
-                  "ISO 9001 quality management certified",
+                  "DEWA registered contractor",
+                  "Dubai licensed company since 2020",
+                  "Design, approval and installation in one team",
+                  "Available 24/7 for urgent electrical work",
                 ].map((point, i) => (
                   <div key={i} className="flex items-start gap-2">
                     <CheckCircle size={20} className="text-amber-500 flex-shrink-0 mt-0.5" />
@@ -131,8 +131,8 @@ export default function Home() {
                     <ShieldCheck size={24} className="text-green-600" />
                   </div>
                   <div>
-                    <div className="font-bold text-slate-900">100% Compliance</div>
-                    <div className="text-sm text-slate-500">First-submission approvals</div>
+                    <div className="font-bold text-slate-900">DEWA Registered</div>
+                    <div className="text-sm text-slate-500">Electrical contractor, Dubai</div>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function Home() {
             <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Why Trust Us</span>
             <h2 className="section-heading mt-2">Built on Expertise, Trust & Authority</h2>
             <p className="section-subheading mx-auto text-center">
-              We meet Google's E-E-A-T standards because we genuinely live them.
+              What you can expect when you work with us.
             </p>
           </div>
 
@@ -209,22 +209,22 @@ export default function Home() {
               {
                 icon: Award,
                 title: "Experience",
-                desc: "10+ years and 500+ projects delivered across Dubai. Every authority, every building type.",
+                desc: "Working in Dubai since 2020 on villas, offices, warehouses and commercial buildings.",
               },
               {
                 icon: ShieldCheck,
                 title: "Expertise",
-                desc: "UAE-licensed engineers registered with DEWA, DCD, DM, Trakhees, JAFZA and more.",
+                desc: "Electrical design, load schedules and authority-ready drawings prepared in-house.",
               },
               {
                 icon: Users,
                 title: "Authoritativeness",
-                desc: "Approved contractor with 15+ UAE regulatory bodies. Trusted by 300+ businesses.",
+                desc: "DEWA registered contractor. We coordinate DM, Civil Defence, RTA and free zone approvals.",
               },
               {
                 icon: TrendingUp,
                 title: "Trustworthiness",
-                desc: "Transparent pricing, first-submission approvals, and a 100% compliance track record.",
+                desc: "Clear quotations, honest timelines and 24/7 availability for urgent work.",
               },
             ].map((item, i) => (
               <Reveal key={i} delay={i * 100}>
