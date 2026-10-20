@@ -1,6 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { MapPin, ArrowRight, CheckCircle, ChevronRight, Phone } from "lucide-react";
 import { LOCATIONS, COMPANY, SERVICES } from "../data/siteData";
+import { LOCATION_CONTENT } from "../data/content";
+import { HeroBackdrop } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -8,20 +10,14 @@ export function LocationsOverview() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/1537008/pexels-photo-1537008.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Locations"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="locations-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Locations" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
             Areas We Serve
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
-            MEP engineering, authority approvals, and fit-out services across Dubai and the wider UAE.
+            Electrical, MEP and authority approval services across Dubai, with selected projects in Abu Dhabi and Sharjah.
           </p>
         </div>
       </section>
@@ -71,20 +67,16 @@ export function LocationDetail() {
     );
   }
 
+  const content = LOCATION_CONTENT[location.slug];
+
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/1537008/pexels-photo-1537008.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt={location.city}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant={`loc-${location.slug}`} />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Locations", path: "/locations" }, { label: location.city }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
-            MEP & Authority Approvals in {location.city}
+            Electrical & MEP Services in {location.city}
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">{location.description}</p>
         </div>
@@ -93,15 +85,16 @@ export function LocationDetail() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">
-            Expert MEP Services in {location.city}
+            Our Work in {location.city}
           </h2>
-          <p className="text-slate-600 text-lg leading-relaxed mb-6">
-            We provide full MEP engineering, authority approval management, contracting, fit-out,
-            EV charging, and solar services in {location.city}. Our local team understands the
-            specific requirements of authorities in this area.
-          </p>
+          <p className="text-slate-600 text-lg leading-relaxed mb-6">{content.intro}</p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Services Available in {location.city}</h2>
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 mb-6">
+            <h3 className="font-bold text-slate-900 mb-1">Authorities in {location.city}</h3>
+            <p className="text-slate-600">{content.authorityNote}</p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {SERVICES.map((cat) => (
               <Link
@@ -114,14 +107,9 @@ export function LocationDetail() {
             ))}
           </div>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why Choose Us in {location.city}</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">What to Expect</h2>
           <div className="space-y-2">
-            {[
-              `Local team with ${location.city}-specific authority knowledge`,
-              "Fast response — 24 hours or less",
-              "DEWA registered contractor",
-              "Transparent pricing and honest timelines",
-            ].map((point, i) => (
+            {content.points.map((point, i) => (
               <div key={i} className="flex items-start gap-2">
                 <CheckCircle size={20} className="text-amber-500 flex-shrink-0 mt-0.5" />
                 <span className="text-slate-700">{point}</span>

@@ -1,6 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { MapPin, CheckCircle } from "lucide-react";
 import { PROJECTS } from "../data/siteData";
+import { HeroBackdrop, CardArt } from "../components/Artwork";
+import { projectIcon } from "../components/icons";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -8,13 +10,7 @@ export function ProjectsOverview() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Projects"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="projects-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Projects" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
@@ -37,11 +33,7 @@ export function ProjectsOverview() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100"
               >
                 <div className="relative overflow-hidden h-52">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <CardArt seed={p.slug} icon={projectIcon(p.category)} />
                   <div className="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
                     {p.category}
                   </div>
@@ -89,8 +81,7 @@ export function ProjectDetail() {
   return (
     <div>
       <section className="relative h-[400px] overflow-hidden">
-        <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 hero-overlay" />
+        <HeroBackdrop variant={`project-${project.slug}`} />
         <div className="max-w-7xl mx-auto px-4 relative z-10 h-full flex flex-col justify-end pb-12">
           <Breadcrumbs items={[{ label: "Projects", path: "/projects" }, { label: project.title }]} />
           <div className="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full inline-block w-fit mb-3">
@@ -160,7 +151,7 @@ export function ProjectDetail() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100"
               >
                 <div className="relative overflow-hidden h-40">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <CardArt seed={p.slug} icon={projectIcon(p.category)} />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors text-sm">{p.title}</h3>

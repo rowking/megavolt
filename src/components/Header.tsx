@@ -37,7 +37,7 @@ export default function Header() {
               <Mail size={14} /> {COMPANY.email}
             </a>
             <span className="flex items-center gap-1.5">
-              <MapPin size={14} /> Deira, Dubai
+              <MapPin size={14} /> International City, Dubai
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -59,8 +59,10 @@ export default function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <img
-                src="/assets/images/Mega_Volt_logo250.png"
+                src="/assets/images/megavolt-logo.webp"
                 alt="Megavolt Technical Services"
+                width={46}
+                height={56}
                 className="h-14 w-auto object-contain"
               />
               <div>

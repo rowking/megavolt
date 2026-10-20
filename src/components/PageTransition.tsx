@@ -1,12 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation();
   const [displayChildren, setDisplayChildren] = useState(children);
   const [transitioning, setTransitioning] = useState(false);
+  const firstPath = useRef(pathname);
 
   useEffect(() => {
+    // No fade on the first page load, so prerendered content shows immediately.
+    if (pathname === firstPath.current) {
+      setDisplayChildren(children);
+      return;
+    }
+    firstPath.current = "";
     setTransitioning(true);
     const timer = setTimeout(() => {
       setDisplayChildren(children);

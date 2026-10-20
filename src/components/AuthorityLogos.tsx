@@ -6,7 +6,7 @@ export default function AuthorityLogos({ dark = false }: { dark?: boolean }) {
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
           <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-2 ${dark ? "text-amber-400" : "text-amber-600"}`}>
-            Registered &amp; Approved
+            Authority Submissions
           </p>
           <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-white" : "text-slate-900"}`} style={{ fontFamily: 'Montserrat' }}>
             Authorities We Work With
@@ -24,6 +24,10 @@ export default function AuthorityLogos({ dark = false }: { dark?: boolean }) {
                   src={auth.logo}
                   alt={auth.name}
                   title={auth.name}
+                  width={80}
+                  height={52}
+                  loading="lazy"
+                  decoding="async"
                   className="max-w-full max-h-full object-contain"
                   style={{ maxHeight: '52px' }}
                 />
