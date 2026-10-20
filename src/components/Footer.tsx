@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Instagram, ChevronRight, Clock, Building2 } from "lucide-react";
+import { Phone, Mail, MapPin, Linkedin, Instagram, ChevronRight, Clock } from "lucide-react";
 import { COMPANY, SERVICES, INDUSTRIES, LOCATIONS, AUTHORITY_LOGOS, OFFICES } from "../data/siteData";
 
 export default function Footer() {
@@ -156,13 +156,6 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
-              <li className="flex items-start gap-2">
-                <Building2 size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-400">
-                  <span className="block text-slate-300">Registered Office</span>
-                  {COMPANY.registeredOffice}
-                </span>
-              </li>
               <li className="flex items-center gap-2 text-slate-400">
                 <Clock size={16} className="text-amber-400" /> {COMPANY.hours}
               </li>

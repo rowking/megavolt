@@ -358,7 +358,6 @@ export default function Home() {
                         <div className="font-bold text-slate-900">{office.address}</div>
                       </div>
                     ))}
-                    <div className="text-sm text-slate-500">Registered office: {COMPANY.registeredOffice}</div>
                   </div>
                 </div>
               </div>
