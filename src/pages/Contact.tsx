@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
-import { COMPANY } from "../data/siteData";
+import { COMPANY, OFFICES } from "../data/siteData";
 import { HeroBackdrop } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import ContactForm from "../components/ContactForm";
@@ -60,13 +60,14 @@ export default function Contact() {
                   <MapPin size={22} className="text-amber-600" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-500">Office</div>
-                  <div className="font-bold text-slate-900">{COMPANY.address}</div>
-                  <div className="text-sm text-slate-500 mt-3">Registered Office</div>
+                  {OFFICES.map((office) => (
+                    <div key={office.name} className="mb-3">
+                      <div className="text-sm text-slate-500">{office.name}</div>
+                      <div className="font-bold text-slate-900">{office.address}</div>
+                    </div>
+                  ))}
+                  <div className="text-sm text-slate-500">Registered Office</div>
                   <div className="font-bold text-slate-900">{COMPANY.registeredOffice}</div>
-                  <a href={COMPANY.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-amber-600 hover:underline mt-2 inline-block">
-                    Open in Google Maps
-                  </a>
                 </div>
               </div>
 
@@ -89,18 +90,31 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-            <iframe
-              src={COMPANY.mapEmbed}
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Megavolt office location, International City, Dubai"
-            />
+          {/* Maps: one per office (free Google Maps embeds, no API key or billing) */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {OFFICES.map((office) => (
+              <div key={office.name} className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-white">
+                <iframe
+                  src={office.mapEmbed}
+                  width="100%"
+                  height="320"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title={`Megavolt ${office.name}, Dubai`}
+                />
+                <div className="p-5 flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-bold text-slate-900">{office.name}</h3>
+                    <p className="text-sm text-slate-600 mt-1">{office.address}</p>
+                  </div>
+                  <a href={office.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-amber-600 font-semibold hover:underline whitespace-nowrap">
+                    Directions
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
