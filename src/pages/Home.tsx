@@ -4,7 +4,7 @@ import {
   Sun, Cpu, Clock, Award, Users, Phone, ChevronRight, MapPin,
   TrendingUp, Sparkles,
 } from "lucide-react";
-import { SERVICES, INDUSTRIES, PROJECTS, STATS, COMPANY } from "../data/siteData";
+import { SERVICES, INDUSTRIES, PROJECTS, STATS, COMPANY, OFFICES } from "../data/siteData";
 import Testimonials from "../components/Testimonials";
 import ContactForm from "../components/ContactForm";
 import CTASection from "../components/CTASection";
@@ -352,9 +352,12 @@ export default function Home() {
                     <MapPin size={22} className="text-amber-600" />
                   </div>
                   <div>
-                    <div className="text-sm text-slate-500">Office</div>
-                    <div className="font-bold text-slate-900">{COMPANY.address}</div>
-                    <div className="text-sm text-slate-500 mt-1">Registered office: {COMPANY.registeredOffice}</div>
+                    {OFFICES.map((office) => (
+                      <div key={office.name} className="mb-2">
+                        <div className="text-sm text-slate-500">{office.name}</div>
+                        <div className="font-bold text-slate-900">{office.address}</div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

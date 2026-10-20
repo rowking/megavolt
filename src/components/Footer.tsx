@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Instagram, ChevronRight, Clock, Building2 } from "lucide-react";
-import { COMPANY, SERVICES, INDUSTRIES, LOCATIONS, AUTHORITY_LOGOS } from "../data/siteData";
+import { Phone, Mail, MapPin, Linkedin, Instagram, ChevronRight, Clock } from "lucide-react";
+import { COMPANY, SERVICES, INDUSTRIES, LOCATIONS, AUTHORITY_LOGOS, OFFICES } from "../data/siteData";
 
 export default function Footer() {
   return (
@@ -147,20 +147,15 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-400">
-                  <span className="block text-slate-300">Office</span>
-                  {COMPANY.address}
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Building2 size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-400">
-                  <span className="block text-slate-300">Registered Office</span>
-                  {COMPANY.registeredOffice}
-                </span>
-              </li>
+              {OFFICES.map((office) => (
+                <li key={office.name} className="flex items-start gap-2">
+                  <MapPin size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                  <a href={office.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-400 transition-colors">
+                    <span className="block text-slate-300">{office.name}</span>
+                    {office.address}
+                  </a>
+                </li>
+              ))}
               <li className="flex items-center gap-2 text-slate-400">
                 <Clock size={16} className="text-amber-400" /> {COMPANY.hours}
               </li>

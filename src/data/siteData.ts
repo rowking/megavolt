@@ -18,6 +18,22 @@ export const COMPANY = {
   authorities: "15+",
 };
 
+/** Both offices. The first is megavolt.ae's main office (its Google Business Profile links here). */
+export const OFFICES = [
+  {
+    name: "Main Office",
+    address: "International City T01 - Warsan First - Spain Cluster, Dubai",
+    mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
+    mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
+  },
+  {
+    name: "Deira Office",
+    address: "12 22A Street, Al Khabaisi, Deira, Dubai - P.O. Box 187007, Port Saeed",
+    mapsUrl: "https://maps.google.com/?cid=15789134900662765967",
+    mapEmbed: "https://www.google.com/maps?q=25.2636355,55.3310044&z=15&output=embed",
+  },
+];
+
 export const AUTHORITY_LOGOS = [
   {
     name: "Dubai Electricity & Water Authority (DEWA)",
