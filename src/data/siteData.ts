@@ -5,8 +5,14 @@ export const COMPANY = {
   phone: "+971 56 596 6254",
   whatsapp: "971565966254",
   email: "info@megavolt.ae",
-  address: "International City T01 - Warsan First - Spain Cluster - Dubai",
+  address: "International City T01 - Warsan First - Spain Cluster, Dubai",
+  registeredOffice: "Port Saeed, Dubai, UAE - P.O. Box 187007",
+  hours: "Open 24 hours",
   mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
+  mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
+  approvalsSite: "https://www.uaeapprovalhub.com/",
+  instagram: "https://www.instagram.com/megavolt_dubai/",
+  linkedin: "https://www.linkedin.com/company/uaeapprovalhub/",
   license: "Dubai Licensed",
   founded: "2020",
   authorities: "15+",
@@ -16,37 +22,37 @@ export const AUTHORITY_LOGOS = [
   {
     name: "Dubai Electricity & Water Authority (DEWA)",
     short: "DEWA",
-    logo: "/assets/images/dewalogo2x.webp",
+    logo: "/assets/images/authorities/dewa.webp",
   },
   {
     name: "Dubai Civil Defence (DCD)",
     short: "DCD",
-    logo: "/assets/images/DCD.png",
+    logo: "/assets/images/authorities/dcd.webp",
   },
   {
     name: "Dubai Municipality",
     short: "DM",
-    logo: "/assets/images/DM.png",
+    logo: "/assets/images/authorities/dm.webp",
   },
   {
     name: "Dubai Development Authority",
     short: "DDA",
-    logo: "/assets/images/DDA.png",
+    logo: "/assets/images/authorities/dda.webp",
   },
   {
     name: "Jebel Ali Free Zone Authority (JAFZA)",
     short: "JAFZA",
-    logo: "/assets/images/Jafza.png",
+    logo: "/assets/images/authorities/jafza.webp",
   },
   {
     name: "Roads & Transport Authority (RTA)",
     short: "RTA",
-    logo: "/assets/images/RTA.png",
+    logo: "/assets/images/authorities/rta.webp",
   },
   {
     name: "Trakhees — Ports, Customs & Free Zone Corporation",
     short: "Trakhees",
-    logo: "/assets/images/Trakhees.png",
+    logo: "/assets/images/authorities/trakhees.webp",
   },
 ];
 
@@ -147,18 +153,18 @@ export const SERVICES = [
 ];
 
 export const INDUSTRIES = [
-  { name: "Warehouses & Logistics", slug: "warehouses", icon: "Warehouse", image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Corporate Offices", slug: "offices", icon: "Building2", image: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Villas & Residences", slug: "villas", icon: "Home", image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Hotels & Hospitality", slug: "hotels", icon: "Hotel", image: "https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Hospitals & Healthcare", slug: "hospitals", icon: "Heart", image: "https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Schools & Education", slug: "schools", icon: "GraduationCap", image: "https://images.pexels.com/photos/1580477/pexels-photo-1580477.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Retail & Showrooms", slug: "retail", icon: "ShoppingBag", image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Restaurants & F&B", slug: "restaurants", icon: "UtensilsCrossed", image: "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Factories & Industrial", slug: "factories", icon: "Factory", image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Data Centres", slug: "data-centres", icon: "Server", image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Government Buildings", slug: "government", icon: "Landmark", image: "https://images.pexels.com/photos/1537008/pexels-photo-1537008.jpeg?auto=compress&cs=tinysrgb&w=800" },
-  { name: "Mosques", slug: "mosques", icon: "Building", image: "https://images.pexels.com/photos/2187654/pexels-photo-2187654.jpeg?auto=compress&cs=tinysrgb&w=800" },
+  { name: "Warehouses & Logistics", slug: "warehouses", icon: "Warehouse" },
+  { name: "Corporate Offices", slug: "offices", icon: "Building2" },
+  { name: "Villas & Residences", slug: "villas", icon: "Home" },
+  { name: "Hotels & Hospitality", slug: "hotels", icon: "Hotel" },
+  { name: "Hospitals & Healthcare", slug: "hospitals", icon: "Heart" },
+  { name: "Schools & Education", slug: "schools", icon: "GraduationCap" },
+  { name: "Retail & Showrooms", slug: "retail", icon: "ShoppingBag" },
+  { name: "Restaurants & F&B", slug: "restaurants", icon: "UtensilsCrossed" },
+  { name: "Factories & Industrial", slug: "factories", icon: "Factory" },
+  { name: "Data Centres", slug: "data-centres", icon: "Server" },
+  { name: "Government Buildings", slug: "government", icon: "Landmark" },
+  { name: "Mosques", slug: "mosques", icon: "Building" },
 ];
 
 export const PROJECTS = [
@@ -170,7 +176,6 @@ export const PROJECTS = [
     location: "JAFZA, Dubai",
     scope: "3-phase power upgrade from 200A to 600A, new MDB, sub-distribution, earthing",
     authorities: ["DEWA", "JAFZA"],
-    image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800",
     results: "Upgrade completed in 10 days with zero production downtime",
     tags: ["Power Upgrade", "JAFZA", "Warehouse"],
   },
@@ -182,7 +187,6 @@ export const PROJECTS = [
     location: "Business Bay, Dubai",
     scope: "2,500 sqft Grade-A office fit-out including MEP, joinery, glass partitions, and AV systems",
     authorities: ["Dubai Municipality", "DCD"],
-    image: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800",
     results: "Delivered in 45 days, fully compliant, client moved in ahead of schedule",
     tags: ["Office Fit-out", "Business Bay", "MEP"],
   },
@@ -193,8 +197,7 @@ export const PROJECTS = [
     category: "Authority Approvals",
     location: "JLT, Dubai",
     scope: "Complete DCD approval including fire alarm, fire fighting, emergency lighting, and NOC",
-    authorities: ["DCD", "Trakhees"],
-    image: "https://images.pexels.com/photos/67468/pexels-photo-67468.jpeg?auto=compress&cs=tinysrgb&w=800",
+    authorities: ["DCD", "DMCC"],
     results: "DCD NOC obtained in 3 weeks, restaurant opened on schedule",
     tags: ["DCD", "Restaurant", "Fire Alarm"],
   },
@@ -206,7 +209,6 @@ export const PROJECTS = [
     location: "Jumeirah, Dubai",
     scope: "15kWp rooftop solar PV system with DEWA net metering approval",
     authorities: ["DEWA"],
-    image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800",
     results: "System live in 4 weeks, 70% reduction in electricity bill",
     tags: ["Solar", "DEWA", "Residential"],
   },
@@ -218,7 +220,6 @@ export const PROJECTS = [
     location: "Dubai South",
     scope: "Full MEP design package for 15,000 sqm logistics facility including shop drawings",
     authorities: ["Dubai South", "DEWA"],
-    image: "https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=800",
     results: "Design approved first submission, construction started on schedule",
     tags: ["MEP Design", "Dubai South", "Industrial"],
   },
@@ -229,13 +230,13 @@ export const TESTIMONIALS: { name: string; role: string; company: string; text: 
 export const BLOG_POSTS = [
   {
     id: 1,
-    title: "How to Get DEWA Approval in Dubai: Complete 2024 Guide",
+    title: "How to Get DEWA Approval in Dubai: Documents, Steps and Common Delays",
     slug: "how-to-get-dewa-approval-dubai",
     category: "Authority Approvals",
     excerpt: "A step-by-step guide to obtaining DEWA approval for your electrical installation in Dubai, including required documents, timelines, and common pitfalls.",
-    image: "https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800",
     date: "2024-03-15",
-    readTime: "8 min read",
+    updated: "2026-10-20",
+    readTime: "4 min read",
   },
   {
     id: 2,
@@ -243,19 +244,19 @@ export const BLOG_POSTS = [
     slug: "dubai-civil-defence-approval-guide",
     category: "Authority Approvals",
     excerpt: "Complete breakdown of the DCD approval process for commercial premises, restaurants, warehouses, and offices in Dubai.",
-    image: "https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=800",
     date: "2024-03-08",
-    readTime: "10 min read",
+    updated: "2026-10-20",
+    readTime: "3 min read",
   },
   {
     id: 3,
-    title: "EV Charger Installation Requirements in Dubai: DEWA Guidelines 2024",
+    title: "EV Charger Installation in Dubai: What to Check Before You Buy",
     slug: "ev-charger-installation-requirements-dubai",
     category: "EV Solutions",
     excerpt: "Everything you need to know about installing EV chargers in Dubai, from DEWA technical requirements to the approval process.",
-    image: "https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=800",
     date: "2024-02-28",
-    readTime: "7 min read",
+    updated: "2026-10-20",
+    readTime: "4 min read",
   },
   {
     id: 4,
@@ -263,9 +264,9 @@ export const BLOG_POSTS = [
     slug: "office-fit-out-approval-dubai-checklist",
     category: "Fit-out Services",
     excerpt: "The authoritative checklist for getting Dubai Municipality and DCD approval for your office fit-out project.",
-    image: "https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800",
     date: "2024-02-20",
-    readTime: "6 min read",
+    updated: "2026-10-20",
+    readTime: "3 min read",
   },
   {
     id: 5,
@@ -273,9 +274,9 @@ export const BLOG_POSTS = [
     slug: "electrical-load-upgrade-dubai",
     category: "MEP Contracting",
     excerpt: "Signs your Dubai property needs an electrical load upgrade, the DEWA process, costs, and timelines explained.",
-    image: "https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=800",
     date: "2024-02-12",
-    readTime: "9 min read",
+    updated: "2026-10-20",
+    readTime: "3 min read",
   },
   {
     id: 6,
@@ -283,9 +284,9 @@ export const BLOG_POSTS = [
     slug: "warehouse-fit-out-guide-dubai-jafza",
     category: "Fit-out Services",
     excerpt: "A comprehensive guide to planning and executing a warehouse fit-out in Dubai, covering JAFZA requirements, MEP systems, and compliance.",
-    image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800",
     date: "2024-02-05",
-    readTime: "11 min read",
+    updated: "2026-10-20",
+    readTime: "3 min read",
   },
 ];
 
@@ -296,7 +297,7 @@ export const FAQS = [
       { q: "How long does DEWA approval take in Dubai?", a: "Standard DEWA approvals typically take 2–4 weeks from submission of complete documents. Complex or high-load applications may take 4–8 weeks. Complete, accurate documents are the best way to avoid delays." },
       { q: "What documents are required for DEWA approval?", a: "Required documents include: single-line diagram, load schedule, MEP drawings, trade license, title deed/NOC from developer, NOC from Dubai Municipality, and signed contractor forms. Specific requirements vary by project type." },
       { q: "Can I install a DEWA-approved EV charger in my villa?", a: "Yes. DEWA allows EV charger installation in residential villas. You need a load assessment, DEWA-approved charger model, and a certified installer. We handle the full process from design to energization." },
-      { q: "What is the DEWA net metering scheme for solar?", a: "DEWA's Shams Dubai net metering program allows grid-connected solar PV systems to export surplus energy back to the grid, with credits applied to your electricity bill. Residential systems up to 200kWp and commercial up to unlimited are eligible." },
+      { q: "What is the DEWA net metering scheme for solar?", a: "Shams Dubai is DEWA's net metering scheme. A grid-connected solar PV system exports surplus energy to the DEWA grid and the exported units are credited against your electricity bill. The system must be designed and installed by a DEWA-enrolled solar contractor and approved by DEWA before connection." },
     ],
   },
   {
@@ -325,7 +326,7 @@ export const FAQS = [
 ];
 
 export const RESOURCES = [
-  { title: "DEWA Approval Checklist 2024", description: "Complete document checklist for DEWA electrical connection and NOC applications", type: "PDF Checklist", icon: "FileCheck" },
+  { title: "DEWA Approval Checklist", description: "Complete document checklist for DEWA electrical connection and NOC applications", type: "PDF Checklist", icon: "FileCheck" },
   { title: "DCD Fire Safety Approval Guide", description: "Step-by-step guide to obtaining Civil Defence NOC for commercial premises", type: "PDF Guide", icon: "Shield" },
   { title: "Office Fit-out Planning Template", description: "Free timeline and scope planning template for Dubai office fit-out projects", type: "Excel Template", icon: "Table" },
   { title: "Electrical Load Calculator", description: "Interactive tool to calculate your building's electrical load requirements", type: "Online Tool", icon: "Calculator" },
@@ -333,20 +334,13 @@ export const RESOURCES = [
   { title: "EV Charger Specification Guide", description: "Technical requirements for EV charger installation in Dubai (DEWA compliant)", type: "PDF Guide", icon: "Zap" },
 ];
 
-export const TEAM = [
-  { name: "Eng. Khalid Al Mansoori", role: "Managing Director", credential: "BEng Electrical, UAE Licensed", image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" },
-  { name: "Eng. Rajesh Kumar", role: "Head of MEP Design", credential: "MEng Mechanical, 15+ yrs UAE experience", image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" },
-  { name: "Eng. Sara Al Hashimi", role: "Authority Approvals Manager", credential: "BEng Civil, DEWA & DCD Specialist", image: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400" },
-  { name: "Eng. Mohammed Farooq", role: "EV & Solar Lead Engineer", credential: "BEng Electrical, IEC & DEWA Certified", image: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400" },
-];
-
 export const LOCATIONS = [
-  { city: "Dubai", slug: "dubai", description: "Our headquarters and primary service area covering all of Dubai." },
-  { city: "Abu Dhabi", slug: "abu-dhabi", description: "Full MEP and approval services across Abu Dhabi and Al Ain." },
-  { city: "Sharjah", slug: "sharjah", description: "MEP contracting and authority approval services in Sharjah." },
-  { city: "JAFZA", slug: "jafza", description: "Specialized JAFZA industrial MEP and compliance services." },
-  { city: "Dubai South", slug: "dubai-south", description: "Dubai South freezone MEP, logistics, and approval specialists." },
-  { city: "Business Bay", slug: "business-bay", description: "Corporate office MEP, fit-out, and DM approval services." },
+  { city: "Dubai", slug: "dubai", description: "Our office is in International City and most of our work is across Dubai." },
+  { city: "Abu Dhabi", slug: "abu-dhabi", description: "Electrical design and installation for selected projects in Abu Dhabi." },
+  { city: "Sharjah", slug: "sharjah", description: "Electrical design and installation for selected projects in Sharjah." },
+  { city: "JAFZA", slug: "jafza", description: "Warehouse and factory power upgrades with Trakhees and DEWA approvals in JAFZA." },
+  { city: "Dubai South", slug: "dubai-south", description: "Electrical works and DEWA submissions for logistics and warehouse units in Dubai South." },
+  { city: "Business Bay", slug: "business-bay", description: "Office and retail fit-out electrical works with DM, Civil Defence and DEWA approvals in Business Bay." },
 ];
 
 export const CERTIFICATIONS = [

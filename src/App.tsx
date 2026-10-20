@@ -20,19 +20,23 @@ import FAQ from "./pages/FAQ";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import { LocationsOverview, LocationDetail } from "./pages/Locations";
+import { Privacy, Terms, NotFound } from "./pages/Legal";
+import { applySeo } from "./seo";
 
-function ScrollToTop() {
+function RouteEffects() {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
+    applySeo(pathname);
   }, [pathname]);
   return null;
 }
 
-export default function App() {
+/** The whole site without a router, so the prerenderer can use a static one. */
+export function Site() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
+    <>
+      <RouteEffects />
       <CustomCursor />
       <ScrollProgress />
       <div className="min-h-screen flex flex-col bg-white">
@@ -57,13 +61,23 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/locations" element={<LocationsOverview />} />
               <Route path="/locations/:slug" element={<LocationDetail />} />
-              <Route path="*" element={<Home />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </PageTransition>
         </main>
         <Footer />
         <WhatsAppButton />
       </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Site />
     </BrowserRouter>
   );
 }

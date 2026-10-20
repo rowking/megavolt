@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram, Twitter, ChevronRight } from "lucide-react";
+import { Phone, Mail, MapPin, Linkedin, Instagram, ChevronRight, Clock, Building2 } from "lucide-react";
 import { COMPANY, SERVICES, INDUSTRIES, LOCATIONS, AUTHORITY_LOGOS } from "../data/siteData";
 
 export default function Footer() {
@@ -33,12 +33,12 @@ export default function Footer() {
       {/* Authority logos strip */}
       <div className="bg-slate-800 border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="text-center text-slate-400 text-xs uppercase tracking-wider mb-4">Registered & Approved By</div>
+          <div className="text-center text-slate-400 text-xs uppercase tracking-wider mb-4">Authorities We Submit To</div>
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
             {AUTHORITY_LOGOS.map((auth) => (
               <div key={auth.short} className="flex flex-col items-center gap-1">
                 <div className="bg-white rounded-lg p-2 shadow-md w-14 h-14 flex items-center justify-center">
-                  <img src={auth.logo} alt={auth.name} className="max-w-full max-h-full object-contain" style={{ maxHeight: '36px' }} />
+                  <img src={auth.logo} alt={auth.name} width={48} height={36} loading="lazy" decoding="async" className="max-w-full max-h-full object-contain" style={{ maxHeight: '36px' }} />
                 </div>
                 <span className="text-xs text-slate-400 font-medium">{auth.short}</span>
               </div>
@@ -54,8 +54,11 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/assets/images/Mega_Volt_logo250.png"
+                src="/assets/images/megavolt-logo.webp"
                 alt="Megavolt Technical Services"
+                width={46}
+                height={56}
+                loading="lazy"
                 className="h-14 w-auto object-contain bg-white rounded-lg p-1"
               />
               <div>
@@ -71,12 +74,17 @@ export default function Footer() {
               <a href="https://www.uaeapprovalhub.com/" className="text-amber-400 hover:underline">UAE Approval Hub</a>.
             </p>
             <div className="flex gap-3 mt-4">
-              {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (
+              {[
+                { Icon: Instagram, href: COMPANY.instagram, label: "Megavolt on Instagram" },
+                { Icon: Linkedin, href: COMPANY.linkedin, label: "UAE Approval Hub on LinkedIn" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-amber-500 hover:text-slate-900 transition-all"
-                  aria-label="Social link"
+                  aria-label={label}
                 >
                   <Icon size={18} />
                 </a>
@@ -141,7 +149,20 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-400">{COMPANY.address}</span>
+                <span className="text-slate-400">
+                  <span className="block text-slate-300">Office</span>
+                  {COMPANY.address}
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Building2 size={16} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                <span className="text-slate-400">
+                  <span className="block text-slate-300">Registered Office</span>
+                  {COMPANY.registeredOffice}
+                </span>
+              </li>
+              <li className="flex items-center gap-2 text-slate-400">
+                <Clock size={16} className="text-amber-400" /> {COMPANY.hours}
               </li>
               <li>
                 <a href={`tel:${COMPANY.phone}`} className="flex items-center gap-2 text-slate-400 hover:text-amber-400 transition-colors">
@@ -164,7 +185,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-amber-400 transition-colors">Terms of Service</Link>
+            <Link to="/terms" className="hover:text-amber-400 transition-colors">Terms of Use</Link>
           </div>
         </div>
       </div>

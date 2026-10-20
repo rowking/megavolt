@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { COMPANY } from "../data/siteData";
+import { HeroBackdrop } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import ContactForm from "../components/ContactForm";
 
@@ -7,20 +8,14 @@ export default function Contact() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Contact"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="contact-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Contact" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
             Get In Touch
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
-            Free consultation with a licensed UAE engineer. Response within 24 hours.
+            Free consultation. Call, WhatsApp or email us. We are open 24 hours.
           </p>
         </div>
       </section>
@@ -67,6 +62,11 @@ export default function Contact() {
                 <div>
                   <div className="text-sm text-slate-500">Office</div>
                   <div className="font-bold text-slate-900">{COMPANY.address}</div>
+                  <div className="text-sm text-slate-500 mt-3">Registered Office</div>
+                  <div className="font-bold text-slate-900">{COMPANY.registeredOffice}</div>
+                  <a href={COMPANY.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-amber-600 hover:underline mt-2 inline-block">
+                    Open in Google Maps
+                  </a>
                 </div>
               </div>
 
@@ -76,8 +76,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Business Hours</div>
-                  <div className="font-bold text-slate-900">Mon–Sat: 8am–6pm</div>
-                  <div className="text-sm text-slate-500">Emergency: 24/7</div>
+                  <div className="font-bold text-slate-900">{COMPANY.hours}</div>
+                  <div className="text-sm text-slate-500">Including urgent electrical work</div>
                 </div>
               </div>
             </div>
@@ -92,14 +92,14 @@ export default function Contact() {
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100">
             <iframe
-              src="https://maps.google.com/maps?q=25.1675123,55.3982207&z=16&output=embed"
+              src={COMPANY.mapEmbed}
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Office Location"
+              title="Megavolt office location, International City, Dubai"
             />
           </div>
         </div>

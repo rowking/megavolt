@@ -1,6 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { BLOG_POSTS } from "../data/siteData";
+import { BLOG_CONTENT } from "../data/content";
+import { blogIcon } from "../components/icons";
+
+const fmt = (d: string) =>
+  new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+import { HeroBackdrop, CardArt } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -8,21 +14,15 @@ export function BlogOverview() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/261663/pexels-photo-261663.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Blog"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="blog-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Blog" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
             Knowledge Hub
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
-            Expert guides on UAE authority approvals, MEP engineering, fit-out processes,
-            EV charging, and solar — written by our licensed engineers.
+            Practical guides on DEWA approvals, Civil Defence, fit-out approvals and EV chargers
+            in Dubai, written by our team.
           </p>
         </div>
       </section>
@@ -36,7 +36,7 @@ export function BlogOverview() {
               className="group grid md:grid-cols-2 gap-8 bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100 mb-12"
             >
               <div className="relative h-64 md:h-full overflow-hidden">
-                <img src={BLOG_POSTS[0].image} alt={BLOG_POSTS[0].title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <CardArt seed={BLOG_POSTS[0].slug} icon={blogIcon(BLOG_POSTS[0].category)} />
                 <div className="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
                   Featured
                 </div>
@@ -68,14 +68,14 @@ export function BlogOverview() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <CardArt seed={post.slug} icon={blogIcon(post.category)} />
                   <div className="absolute top-3 left-3 bg-white/90 text-slate-700 text-xs font-medium px-2.5 py-1 rounded-full">
                     {post.category}
                   </div>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-3 text-xs text-slate-500 mb-2">
-                    <span className="flex items-center gap-1"><Calendar size={12} /> {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                    <span className="flex items-center gap-1"><Calendar size={12} /> Updated {fmt(post.updated)}</span>
                     <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
                   </div>
                   <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors mb-2">
@@ -112,15 +112,14 @@ export function BlogDetail() {
   return (
     <div>
       <section className="relative h-[400px] overflow-hidden">
-        <img src={post.image} alt={post.title} className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 hero-overlay" />
+        <HeroBackdrop variant={`blog-${post.slug}`} />
         <div className="max-w-4xl mx-auto px-4 relative z-10 h-full flex flex-col justify-end pb-12">
           <Breadcrumbs items={[{ label: "Blog", path: "/blog" }, { label: post.title }]} />
           <div className="flex items-center gap-3 text-sm text-slate-300 mb-3">
             <span className="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
               {post.category}
             </span>
-            <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+            <span className="flex items-center gap-1"><Calendar size={14} /> Updated {fmt(post.updated)}</span>
             <span className="flex items-center gap-1"><Clock size={14} /> {post.readTime}</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: 'Montserrat' }}>
@@ -133,66 +132,42 @@ export function BlogDetail() {
         <div className="max-w-3xl mx-auto px-4">
           <div className="flex items-center gap-3 mb-8 pb-6 border-b border-slate-100">
             <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center text-white font-bold">
-              UH
+              MV
             </div>
             <div>
               <div className="font-bold text-slate-900">Megavolt Engineering Team</div>
-              <div className="text-sm text-slate-500">Licensed UAE MEP Engineers</div>
+              <div className="text-sm text-slate-500">Megavolt Technical Services Co. LLC</div>
             </div>
           </div>
 
           <div className="prose prose-slate max-w-none">
             <p className="text-lg text-slate-700 leading-relaxed">{post.excerpt}</p>
 
-            <p className="text-slate-600 leading-relaxed mt-6">
-              In this guide, we'll walk you through everything you need to know about {post.title.toLowerCase()}.
-              Our team has years of hands-on experience working with Dubai's regulatory authorities,
-              and we've distilled that knowledge into a clear, actionable resource.
-            </p>
+            {(BLOG_CONTENT[post.slug] || []).map((sec) => (
+              <div key={sec.h}>
+                <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">{sec.h}</h2>
+                {sec.p?.map((para, i) => (
+                  <p key={i} className="text-slate-600 leading-relaxed mb-4">{para}</p>
+                ))}
+                {sec.list && (
+                  <ul className="space-y-2 text-slate-600 list-disc pl-5">
+                    {sec.list.map((li) => (
+                      <li key={li}>{li}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
 
-            <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Why This Matters</h2>
-            <p className="text-slate-600 leading-relaxed">
-              Navigating UAE authority requirements can be complex and time-consuming. Without the
-              right documentation and process, approval can take weeks or even months longer than
-              necessary. Understanding the requirements upfront saves time, money, and frustration.
-            </p>
-
-            <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Key Requirements</h2>
-            <ul className="space-y-2 text-slate-600">
-              <li>Valid UAE trade license and company documents</li>
-              <li>Property title deed or lease agreement</li>
-              <li>MEP drawings prepared by a UAE-registered engineering firm</li>
-              <li>Authority-specific application forms</li>
-              <li>Site inspection readiness</li>
-              <li>Compliance with UAE building codes and standards</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">The Process</h2>
-            <p className="text-slate-600 leading-relaxed">
-              The typical approval process involves several stages: document preparation, submission,
-              authority review, site inspection, and final approval. Each authority has its own
-              timeline and specific requirements. Complete, accurate documents from the start
-              help avoid delays.
-            </p>
-
-            <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Common Pitfalls to Avoid</h2>
-            <p className="text-slate-600 leading-relaxed">
-              The most common reasons for approval delays are incomplete documentation, drawings that
-              don't meet authority standards, missing NOCs from other authorities, and failing site
-              inspections. We check for these issues before every submission.
-            </p>
-
-            <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">How We Can Help</h2>
-            <p className="text-slate-600 leading-relaxed">
-              Megavolt handles the entire process end-to-end — from initial assessment and
-              engineering design to authority submission, inspection coordination, and final approval.
-              Contact us for a free consultation and we'll assess your specific requirements.
+            <p className="text-sm text-slate-500 mt-8">
+              Authority requirements and fees change. Confirm the current requirements for your
+              project before you plan around them, or ask us to check for you.
             </p>
 
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8">
               <h3 className="font-bold text-slate-900 mb-2">Need Professional Help?</h3>
               <p className="text-slate-600 text-sm mb-4">
-                Our licensed UAE engineers can handle your entire approval process. Free consultation, response within 24 hours.
+                We prepare the drawings, submit to the authorities and follow up until the approval is issued. Free consultation, response within 24 hours.
               </p>
               <Link to="/contact" className="btn-primary text-sm">
                 Get a Free Quote <ArrowRight size={16} />
@@ -214,7 +189,7 @@ export function BlogDetail() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100"
               >
                 <div className="relative h-40 overflow-hidden">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <CardArt seed={p.slug} icon={blogIcon(p.category)} />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors text-sm">{p.title}</h3>

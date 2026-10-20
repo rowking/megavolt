@@ -59,8 +59,10 @@ export default function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <img
-                src="/assets/images/Mega_Volt_logo250.png"
+                src="/assets/images/megavolt-logo.webp"
                 alt="Megavolt Technical Services"
+                width={46}
+                height={56}
                 className="h-14 w-auto object-contain"
               />
               <div>

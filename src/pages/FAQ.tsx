@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import { FAQS } from "../data/siteData";
+import { HeroBackdrop } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -12,13 +13,7 @@ export default function FAQ() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/6863251/pexels-photo-6863251.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="FAQ"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="faq-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "FAQ" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>

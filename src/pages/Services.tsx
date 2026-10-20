@@ -4,6 +4,7 @@ import {
   ArrowRight, CheckCircle, ChevronRight,
 } from "lucide-react";
 import { SERVICES, COMPANY } from "../data/siteData";
+import { HeroBackdrop } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -17,13 +18,7 @@ export function ServicesOverview() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="MEP services"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="services-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Services" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
@@ -100,13 +95,7 @@ export function ServiceCategory() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt={cat.category}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="services-2" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Services", path: "/services" }, { label: cat.category }]} />
           <div className="flex items-center gap-4 mb-4">
@@ -178,13 +167,7 @@ export function ServiceDetail() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt={item.name}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="services-3" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs
             items={[

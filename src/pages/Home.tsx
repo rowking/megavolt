@@ -10,6 +10,8 @@ import ContactForm from "../components/ContactForm";
 import CTASection from "../components/CTASection";
 import AuthorityLogos from "../components/AuthorityLogos";
 import Reveal from "../components/Reveal";
+import { HeroBackdrop, CardArt, PanelArt } from "../components/Artwork";
+import { industryIcon, projectIcon } from "../components/icons";
 
 import type { LucideIcon } from "lucide-react";
 
@@ -24,12 +26,8 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-[600px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="MEP engineering Dubai"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 hero-overlay animate-gradient" style={{ background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.85) 50%, rgba(15, 23, 42, 0.75) 100%)', backgroundSize: '200% 200%' }} />
+          <HeroBackdrop variant="home" />
+          <div className="absolute inset-0 hero-overlay animate-gradient" style={{ background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.55) 0%, rgba(30, 41, 59, 0.35) 50%, rgba(15, 23, 42, 0.15) 100%)', backgroundSize: '200% 200%' }} />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 py-20 relative z-10">
@@ -120,11 +118,7 @@ export default function Home() {
 
             <div className="relative">
               <Reveal direction="right">
-              <img
-                src="https://images.pexels.com/photos/8961062/pexels-photo-8961062.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="MEP engineering team at work"
-                className="rounded-2xl shadow-2xl w-full"
-              />
+              <PanelArt className="rounded-2xl shadow-2xl w-full h-auto" />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-slate-100 max-w-xs hidden md:block">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -257,18 +251,16 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {INDUSTRIES.map((ind, idx) => {
-              const Icon = iconMap[ind.icon] || Building2;
+              const Icon = industryIcon(ind.icon);
               return (
                 <Reveal key={ind.slug} delay={(idx % 4) * 80}>
                 <Link
                   to={`/industries/${ind.slug}`}
                   className="group relative overflow-hidden rounded-xl aspect-[4/3] card-hover block"
                 >
-                  <img
-                    src={ind.image}
-                    alt={ind.name}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <div className="absolute inset-0">
+                    <CardArt seed={ind.slug} icon={Icon} />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <Icon size={24} className="text-amber-400 mb-2" />
@@ -303,11 +295,7 @@ export default function Home() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100 block h-full"
               >
                 <div className="relative overflow-hidden h-52">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <CardArt seed={p.slug} icon={projectIcon(p.category)} />
                   <div className="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
                     {p.category}
                   </div>
@@ -344,7 +332,7 @@ export default function Home() {
               <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
               <h2 className="section-heading mt-2">Start Your Project Today</h2>
               <p className="text-slate-600 text-lg mt-4">
-                Tell us about your project and get a free consultation with a licensed UAE engineer.
+                Tell us about your project and get a free consultation. We are open 24 hours.
               </p>
 
               <div className="space-y-4 mt-8">
@@ -366,6 +354,7 @@ export default function Home() {
                   <div>
                     <div className="text-sm text-slate-500">Office</div>
                     <div className="font-bold text-slate-900">{COMPANY.address}</div>
+                    <div className="text-sm text-slate-500 mt-1">Registered office: {COMPANY.registeredOffice}</div>
                   </div>
                 </div>
               </div>
@@ -373,7 +362,7 @@ export default function Home() {
               <div className="mt-8 p-6 bg-amber-50 rounded-2xl border border-amber-100">
                 <h4 className="font-bold text-slate-900 mb-2">Emergency MEP Service</h4>
                 <p className="text-sm text-slate-600">
-                  Electrical or fire system emergency? Call our 24/7 line:
+                  Electrical emergency? Call our 24-hour line:
                 </p>
                 <a href={`tel:${COMPANY.phone}`} className="text-amber-600 font-bold text-lg mt-1 inline-block">
                   {COMPANY.phone}

@@ -3,6 +3,7 @@ import {
   CheckCircle, TrendingUp, Building2,
 } from "lucide-react";
 import { COMPANY, CERTIFICATIONS, STATS } from "../data/siteData";
+import { HeroBackdrop, PanelArt } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 import AuthorityLogos from "../components/AuthorityLogos";
@@ -23,13 +24,7 @@ export default function About() {
     <div>
       {/* Hero */}
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Engineering team"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="about-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "About Us" }]} />
           <div className="max-w-3xl">
@@ -137,11 +132,7 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/8961062/pexels-photo-8961062.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Engineering team"
-                className="rounded-2xl shadow-2xl w-full"
-              />
+              <PanelArt className="rounded-2xl shadow-2xl w-full h-auto" />
             </div>
           </div>
         </div>

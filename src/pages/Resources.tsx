@@ -4,6 +4,7 @@ import {
   ArrowRight, Download,
 } from "lucide-react";
 import { RESOURCES } from "../data/siteData";
+import { HeroBackdrop } from "../components/Artwork";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -17,13 +18,7 @@ export default function Resources() {
   return (
     <div>
       <section className="relative py-20 bg-slate-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.pexels.com/photos/261663/pexels-photo-261663.jpeg?auto=compress&cs=tinysrgb&w=1920"
-            alt="Resources"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <HeroBackdrop variant="resources-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Resources" }]} />
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
