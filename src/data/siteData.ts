@@ -313,7 +313,7 @@ export const FAQS = [
     questions: [
       { q: "What is MEP in construction?", a: "MEP stands for Mechanical, Electrical, and Plumbing — the three core engineering systems in any building. MEP engineering covers design, installation, testing, and maintenance of HVAC, power distribution, water supply, drainage, and fire systems." },
       { q: "Do I need an MEP consultant for my fit-out?", a: "For any commercial fit-out requiring authority approvals in Dubai, MEP drawings prepared by a registered UAE engineering firm are mandatory. We provide authority-ready MEP designs as part of our full approval service." },
-      { q: "How much does an MEP approval package cost in Dubai?", a: "Costs vary by project size, type, and authorities involved. A standard office fit-out MEP approval package starts from AED 8,000. Contact us for a free scope assessment and quotation within 24 hours." },
+      { q: "How much does an MEP approval package cost in Dubai?", a: "Costs vary by project size, type, and authorities involved. Contact us for a free quote. Tell us about your property and what you need, and we will reply with a clear quotation within 24 hours." },
     ],
   },
   {
