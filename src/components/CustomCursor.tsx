@@ -63,7 +63,7 @@ export default function CustomCursor() {
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          transform: `translate(-50%, -50) scale(${clicking ? 0.7 : hovering ? 1.6 : 1})`,
+          transform: `translate(-50%, -50%) scale(${clicking ? 0.7 : hovering ? 1.6 : 1})`,
           transition: "transform 200ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
@@ -72,7 +72,8 @@ export default function CustomCursor() {
           style={{
             width: "32px",
             height: "32px",
-            borderColor: hovering ? "#f59e0b" : "rgba(15, 23, 42, 0.4)",
+            borderColor: hovering ? "#fbbf24" : "rgba(245, 158, 11, 0.9)",
+            boxShadow: "0 0 0 1px rgba(255, 255, 255, 0.55), 0 0 12px rgba(245, 158, 11, 0.55)",
             transition: "border-color 200ms ease",
           }}
         />
@@ -90,10 +91,11 @@ export default function CustomCursor() {
       >
         <div
           style={{
-            width: "6px",
-            height: "6px",
+            width: "8px",
+            height: "8px",
             borderRadius: "50%",
-            background: hovering ? "#f59e0b" : "#0f172a",
+            background: hovering ? "#fbbf24" : "#f59e0b",
+            boxShadow: "0 0 0 1.5px #ffffff, 0 0 8px rgba(245, 158, 11, 0.8)",
             transition: "background 200ms ease",
           }}
         />
