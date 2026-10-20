@@ -37,7 +37,7 @@ export default function Header() {
               <Mail size={14} /> {COMPANY.email}
             </a>
             <span className="flex items-center gap-1.5">
-              <MapPin size={14} /> Deira, Dubai
+              <MapPin size={14} /> International City, Dubai
             </span>
           </div>
           <div className="flex items-center gap-4">
