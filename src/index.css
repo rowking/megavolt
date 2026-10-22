@@ -17,12 +17,6 @@
     font-family: 'Montserrat', 'Inter', sans-serif;
   }
 
-  /* Hide default cursor on desktop only */
-  @media (pointer: fine) {
-    * {
-      cursor: none !important;
-    }
-  }
 }
 
 @layer components {
@@ -363,4 +357,32 @@
 
 .animate-blink {
   animation: blink 1.5s ease-in-out infinite;
+}
+
+/* Megavolt bolt cursor (desktop only). A native CSS cursor: the browser draws it,
+   so it never lags behind the mouse. SVG for sharp screens, PNG fallback. */
+@media (pointer: fine) {
+  html,
+  body {
+    cursor: url("/cursors/bolt.svg") 3 2, url("/cursors/bolt.png") 3 2, auto;
+  }
+  html a,
+  html button,
+  html [role="button"],
+  html label[for],
+  html select,
+  html summary,
+  html .cursor-pointer,
+  html .mega-menu-item,
+  html .whatsapp-float {
+    cursor: url("/cursors/bolt-hover.svg") 3 2, url("/cursors/bolt-hover.png") 3 2, pointer;
+  }
+  html input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+  html textarea,
+  html [contenteditable="true"] {
+    cursor: text;
+  }
+  html :disabled {
+    cursor: not-allowed;
+  }
 }
