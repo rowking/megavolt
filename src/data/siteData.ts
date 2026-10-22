@@ -11,7 +11,7 @@ export const COMPANY = {
   mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
   mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
   approvalsSite: "https://www.uaeapprovalhub.com/",
-  instagram: "https://www.instagram.com/megavolt_dubai/",
+  instagram: "https://www.instagram.com/megavoltae/",
   linkedin: "https://www.linkedin.com/company/uaeapprovalhub/",
   license: "Dubai Licensed",
   founded: "2020",
