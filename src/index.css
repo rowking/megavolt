@@ -364,7 +364,7 @@
 @media (pointer: fine) {
   html,
   body {
-    cursor: url("/cursors/bolt.svg") 3 2, url("/cursors/bolt.png") 3 2, auto;
+    cursor: url("/cursors/bolt.svg") 6 2, url("/cursors/bolt.png") 6 2, auto;
   }
   html a,
   html button,
@@ -375,7 +375,7 @@
   html .cursor-pointer,
   html .mega-menu-item,
   html .whatsapp-float {
-    cursor: url("/cursors/bolt-hover.svg") 3 2, url("/cursors/bolt-hover.png") 3 2, pointer;
+    cursor: url("/cursors/bolt-hover.svg") 6 2, url("/cursors/bolt-hover.png") 6 2, pointer;
   }
   html input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
   html textarea,
