@@ -5,11 +5,11 @@ export const COMPANY = {
   phone: "+971 56 596 6254",
   whatsapp: "971565966254",
   email: "info@megavolt.ae",
-  address: "International City T01 - Warsan First - Spain Cluster, Dubai",
+  address: "12 22A Street, Al Khabaisi, Deira, Dubai - P.O. Box 187007, Port Saeed",
   registeredOffice: "Port Saeed, Dubai, UAE - P.O. Box 187007",
   hours: "Open 24 hours",
-  mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
-  mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
+  mapsUrl: "https://maps.google.com/?cid=15789134900662765967",
+  mapEmbed: "https://www.google.com/maps?q=25.2636355,55.3310044&z=15&output=embed",
   approvalsSite: "https://www.uaeapprovalhub.com/",
   instagram: "https://www.instagram.com/megavoltae/",
   linkedin: "https://www.linkedin.com/company/uaeapprovalhub/",
@@ -18,19 +18,19 @@ export const COMPANY = {
   authorities: "15+",
 };
 
-/** Both offices. The first is megavolt.ae's main office (its Google Business Profile links here). */
+/** Both offices. The first is the main office (Deira), the same main office used on uaeapprovalhub.com and in directories. */
 export const OFFICES = [
   {
     name: "Main Office",
-    address: "International City T01 - Warsan First - Spain Cluster, Dubai",
-    mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
-    mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
-  },
-  {
-    name: "Deira Office",
     address: "12 22A Street, Al Khabaisi, Deira, Dubai - P.O. Box 187007, Port Saeed",
     mapsUrl: "https://maps.google.com/?cid=15789134900662765967",
     mapEmbed: "https://www.google.com/maps?q=25.2636355,55.3310044&z=15&output=embed",
+  },
+  {
+    name: "International City Office",
+    address: "International City T01 - Warsan First - Spain Cluster, Dubai",
+    mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
+    mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
   },
 ];
 
@@ -351,7 +351,7 @@ export const RESOURCES = [
 ];
 
 export const LOCATIONS = [
-  { city: "Dubai", slug: "dubai", description: "Our office is in International City and most of our work is across Dubai." },
+  { city: "Dubai", slug: "dubai", description: "Our main office is in Deira, with a second office in International City, and most of our work is across Dubai." },
   { city: "Abu Dhabi", slug: "abu-dhabi", description: "Electrical design and installation for selected projects in Abu Dhabi." },
   { city: "Sharjah", slug: "sharjah", description: "Electrical design and installation for selected projects in Sharjah." },
   { city: "JAFZA", slug: "jafza", description: "Warehouse and factory power upgrades with Trakhees and DEWA approvals in JAFZA." },

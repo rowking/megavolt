@@ -153,11 +153,11 @@ export type LocationContent = {
 export const LOCATION_CONTENT: Record<string, LocationContent> = {
   dubai: {
     intro:
-      "Our office is in International City, Dubai, and Dubai is where most of our work is. We prepare drawings, submit to DEWA and the other Dubai authorities, and carry out the electrical work ourselves.",
+      "Our main office is in Deira, with a second office in International City, and Dubai is where most of our work is. We prepare drawings, submit to DEWA and the other Dubai authorities, and carry out the electrical work ourselves.",
     authorityNote:
       "In Dubai, DEWA supplies electricity across the emirate. Building and fit-out approvals go to Dubai Municipality, or to DDA, Trakhees or another master developer depending on where the plot is.",
     points: [
-      "Office in International City, Dubai",
+      "Main office in Deira, second office in International City",
       "DEWA registered contractor",
       "Design, approval and installation in one team",
       "Available 24 hours for urgent electrical work",

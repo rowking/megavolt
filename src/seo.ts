@@ -24,7 +24,7 @@ const STATIC: Record<string, Omit<Seo, "indexable">> = {
   "/about": {
     title: `About Us | ${brand}`,
     description:
-      "Megavolt Technical Services Co. LLC is a Dubai electrical and MEP contractor working since 2020, with an office in International City and authority approvals through UAE Approval Hub.",
+      "Megavolt Technical Services Co. LLC is a Dubai electrical and MEP contractor working since 2020, with its main office in Deira and a second office in International City. Authority approvals are handled through its division, UAE Approval Hub.",
   },
   "/services": {
     title: `Electrical, MEP & Approval Services in Dubai | ${brand}`,
@@ -61,9 +61,9 @@ const STATIC: Record<string, Omit<Seo, "indexable">> = {
     description: "Electrical and MEP jobs in Dubai at Megavolt Technical Services. Send us your CV.",
   },
   "/contact": {
-    title: `Contact Us | ${brand}, International City, Dubai`,
+    title: `Contact Us | ${brand}, Deira, Dubai`,
     description:
-      "Call or WhatsApp +971 56 596 6254 or email info@megavolt.ae. Office in International City, Dubai. Open 24 hours for urgent electrical work.",
+      "Call or WhatsApp +971 56 596 6254 or email info@megavolt.ae. Main office in Deira, second office in International City. Open 24 hours for urgent electrical work.",
   },
   "/locations": {
     title: `Areas We Serve | ${brand}`,
