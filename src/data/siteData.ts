@@ -8,8 +8,8 @@ export const COMPANY = {
   address: "12 22A Street, Al Khabaisi, Deira, Dubai - P.O. Box 187007, Port Saeed",
   registeredOffice: "Port Saeed, Dubai, UAE - P.O. Box 187007",
   hours: "Open 24 hours",
-  mapsUrl: "https://maps.google.com/?cid=15789134900662765967",
-  mapEmbed: "https://www.google.com/maps?q=25.2636355,55.3310044&z=15&output=embed",
+  mapsUrl: "https://share.google/BcTKti97Yz08dU9dJ",
+  mapEmbed: "https://www.google.com/maps?cid=15789134900662765967&output=embed",
   approvalsSite: "https://www.uaeapprovalhub.com/",
   instagram: "https://www.instagram.com/megavoltae/",
   linkedin: "https://www.linkedin.com/company/uaeapprovalhub/",
@@ -23,14 +23,14 @@ export const OFFICES = [
   {
     name: "Main Office",
     address: "12 22A Street, Al Khabaisi, Deira, Dubai - P.O. Box 187007, Port Saeed",
-    mapsUrl: "https://maps.google.com/?cid=15789134900662765967",
-    mapEmbed: "https://www.google.com/maps?q=25.2636355,55.3310044&z=15&output=embed",
+    mapsUrl: "https://share.google/BcTKti97Yz08dU9dJ",
+    mapEmbed: "https://www.google.com/maps?cid=15789134900662765967&output=embed",
   },
   {
     name: "International City Office",
     address: "International City T01 - Warsan First - Spain Cluster, Dubai",
-    mapsUrl: "https://maps.google.com/?cid=13741699719712327857",
-    mapEmbed: "https://www.google.com/maps?q=25.1675123,55.3982207&z=15&output=embed",
+    mapsUrl: "https://share.google/JZbpxUtfNkK0BX1Ui",
+    mapEmbed: "https://www.google.com/maps?cid=13741699719712327857&output=embed",
   },
 ];
 
