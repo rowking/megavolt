@@ -124,7 +124,7 @@ export function getSeo(pathname: string): Seo {
     if (p) {
       return {
         title: `${p.title} | ${brand}`,
-        description: clip(`${p.location}: ${p.scope}. ${p.results}.`),
+        description: clip(`${p.location}: ${p.scope}.${p.results ? ` ${p.results}.` : ""}`),
         indexable: true,
       };
     }

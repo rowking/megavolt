@@ -11,7 +11,8 @@ import CTASection from "../components/CTASection";
 import AuthorityLogos from "../components/AuthorityLogos";
 import Reveal from "../components/Reveal";
 import { HeroBackdrop, CardArt, PanelArt } from "../components/Artwork";
-import { industryIcon, projectIcon } from "../components/icons";
+import { industryIcon } from "../components/icons";
+import ProjectThumb from "../components/ProjectThumb";
 
 import type { LucideIcon } from "lucide-react";
 
@@ -295,7 +296,7 @@ export default function Home() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100 block h-full"
               >
                 <div className="relative overflow-hidden h-52">
-                  <CardArt seed={p.slug} icon={projectIcon(p.category)} />
+                  <ProjectThumb project={p} />
                   <div className="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
                     {p.category}
                   </div>
