@@ -1,8 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import { MapPin, CheckCircle } from "lucide-react";
 import { PROJECTS } from "../data/siteData";
-import { HeroBackdrop, CardArt } from "../components/Artwork";
-import { projectIcon } from "../components/icons";
+import { HeroBackdrop } from "../components/Artwork";
+import ProjectThumb from "../components/ProjectThumb";
 import Breadcrumbs from "../components/Breadcrumbs";
 import CTASection from "../components/CTASection";
 
@@ -33,7 +33,7 @@ export function ProjectsOverview() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100"
               >
                 <div className="relative overflow-hidden h-52">
-                  <CardArt seed={p.slug} icon={projectIcon(p.category)} />
+                  <ProjectThumb project={p} />
                   <div className="absolute top-3 left-3 bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full">
                     {p.category}
                   </div>
@@ -76,7 +76,11 @@ export function ProjectDetail() {
     );
   }
 
-  const related = PROJECTS.filter((p) => p.id !== project.id).slice(0, 3);
+  const others = PROJECTS.filter((p) => p.id !== project.id);
+  const related = [
+    ...others.filter((p) => p.category === project.category),
+    ...others.filter((p) => p.category !== project.category),
+  ].slice(0, 3);
 
   return (
     <div>
@@ -109,25 +113,60 @@ export function ProjectDetail() {
             </div>
             <div className="bg-slate-50 rounded-xl p-5">
               <div className="text-sm text-slate-500">Authorities</div>
-              <div className="font-bold text-slate-900 mt-1">{project.authorities.join(", ")}</div>
+              <div className="font-bold text-slate-900 mt-1">{project.authorities.join(", ") || "—"}</div>
             </div>
           </div>
 
+          {project.image && (
+            <figure className="mb-10">
+              <img
+                src={project.image}
+                alt={project.imageAlt || project.title}
+                width={800}
+                height={600}
+                className="w-full max-h-[520px] object-contain bg-slate-100 rounded-2xl border border-slate-200"
+              />
+              <figcaption className="text-sm text-slate-500 mt-2">
+                Site photo: {project.title}, {project.location}
+              </figcaption>
+            </figure>
+          )}
+
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Project Scope</h2>
-          <p className="text-slate-600 text-lg leading-relaxed">{project.scope}</p>
+          <p className="text-slate-600 text-lg leading-relaxed">{project.scope}.</p>
+          {project.details && (
+            <p className="text-slate-600 text-lg leading-relaxed mt-4">{project.details}</p>
+          )}
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Authority Approvals</h2>
-          <div className="flex flex-wrap gap-2">
-            {project.authorities.map((a) => (
-              <span key={a} className="authority-badge">{a}</span>
-            ))}
-          </div>
+          {project.authorities.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Authority Approvals</h2>
+              <div className="flex flex-wrap gap-2">
+                {project.authorities.map((a) => (
+                  <span key={a} className="authority-badge">{a}</span>
+                ))}
+              </div>
+            </>
+          )}
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Results</h2>
-          <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-            <CheckCircle size={24} className="text-green-500 mb-2" />
-            <p className="text-slate-700 text-lg">{project.results}</p>
-          </div>
+          {project.results && (
+            <>
+              <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Results</h2>
+              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
+                <CheckCircle size={24} className="text-green-500 mb-2" />
+                <p className="text-slate-700 text-lg">{project.results}</p>
+              </div>
+            </>
+          )}
+
+          {project.service && (
+            <p className="mt-8 text-slate-700">
+              Related service:{" "}
+              <Link to={project.service.path} className="text-amber-600 font-semibold hover:underline">
+                {project.service.label}
+              </Link>
+            </p>
+          )}
 
           <div className="flex flex-wrap gap-2 mt-8">
             {project.tags.map((t) => (
@@ -151,7 +190,7 @@ export function ProjectDetail() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm card-hover border border-slate-100"
               >
                 <div className="relative overflow-hidden h-40">
-                  <CardArt seed={p.slug} icon={projectIcon(p.category)} />
+                  <ProjectThumb project={p} />
                 </div>
                 <div className="p-4">
                   <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors text-sm">{p.title}</h3>
