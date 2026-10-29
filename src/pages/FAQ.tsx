@@ -16,7 +16,7 @@ export default function FAQ() {
         <HeroBackdrop variant="faq-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "FAQ" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">

@@ -8,7 +8,7 @@ export default function AuthorityLogos({ dark = false }: { dark?: boolean }) {
           <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-2 ${dark ? "text-amber-400" : "text-amber-700"}`}>
             Authority Submissions
           </p>
-          <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-white" : "text-slate-900"}`} style={{ fontFamily: 'Montserrat' }}>
+          <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-white" : "text-slate-900"}`} style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Authorities We Work With
           </h3>
           <p className={`text-sm mt-2 ${dark ? "text-slate-400" : "text-slate-500"}`}>

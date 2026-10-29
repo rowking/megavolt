@@ -10,18 +10,30 @@
 
   body {
     @apply font-sans antialiased text-slate-800;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'Montserrat', 'Inter', sans-serif;
+    font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
   }
 
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-amber-500/30 hover:-translate-y-0.5;
+    @apply relative overflow-hidden inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:-translate-y-0.5;
+  }
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.45) 50%, transparent 65%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+    pointer-events: none;
+  }
+  .btn-primary:hover::after {
+    transform: translateX(120%);
   }
 
   .btn-secondary {
@@ -34,7 +46,7 @@
 
   .section-heading {
     @apply text-3xl md:text-4xl font-bold text-slate-900 leading-tight;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
   }
 
   .section-subheading {
@@ -42,7 +54,25 @@
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+    @apply transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-slate-900/10;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Photo inside a card: slow zoom on hover */
+  .img-zoom {
+    @apply transition-transform duration-700;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .group:hover .img-zoom {
+    transform: scale(1.06);
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-amber-700 font-semibold text-sm uppercase tracking-[0.18em];
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block w-6 h-0.5 bg-amber-500 rounded-full;
   }
 
   .gradient-text {
@@ -384,5 +414,66 @@
   }
   html :disabled {
     cursor: not-allowed;
+  }
+}
+
+
+/* ===== PROFESSIONAL MOTION (added Oct 2026) ===== */
+
+/* Slow zoom on the hero photo */
+@keyframes ken-burns {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+.animate-ken-burns {
+  animation: ken-burns 14s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform;
+}
+
+/* Underline that draws in under a highlighted word */
+@keyframes draw-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.draw-underline {
+  position: relative;
+  white-space: nowrap;
+}
+.draw-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.02em;
+  height: 0.12em;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #f59e0b, #f97316);
+  transform-origin: left;
+  animation: draw-line 1s 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Moving spark along the hero circuit lines */
+@keyframes current-flow {
+  to { stroke-dashoffset: -400; }
+}
+.current-flow {
+  stroke-dasharray: 18 382;
+  animation: current-flow 4s linear infinite;
+}
+
+/* Header glass effect once the page scrolls */
+.header-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+}
+
+/* Respect visitors who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

@@ -13,7 +13,7 @@ export function LocationsOverview() {
         <HeroBackdrop variant="locations-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Locations" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Areas We Serve
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
@@ -75,7 +75,7 @@ export function LocationDetail() {
         <HeroBackdrop variant={`loc-${location.slug}`} />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Locations", path: "/locations" }, { label: location.city }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Electrical & MEP Services in {location.city}
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">{location.description}</p>

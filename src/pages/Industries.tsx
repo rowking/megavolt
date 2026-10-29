@@ -24,7 +24,7 @@ export function IndustriesOverview() {
         <HeroBackdrop variant="industries-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Industries" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Industries We Serve
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
@@ -101,7 +101,7 @@ export function IndustryDetail() {
             <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
               <Icon size={30} className="text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: 'Montserrat' }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
               {industry.name}
             </h1>
           </div>

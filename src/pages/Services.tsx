@@ -21,7 +21,7 @@ export function ServicesOverview() {
         <HeroBackdrop variant="services-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Services" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Our Services
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
@@ -42,7 +42,7 @@ export function ServicesOverview() {
                     <Icon size={30} className="text-white" />
                   </div>
                   <div>
-                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ fontFamily: 'Montserrat' }}>
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
                       {cat.category}
                     </h2>
                     <p className="text-slate-600 mt-1">{cat.description}</p>
@@ -102,7 +102,7 @@ export function ServiceCategory() {
             <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
               <Icon size={30} className="text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: 'Montserrat' }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
               {cat.category}
             </h1>
           </div>
@@ -180,7 +180,7 @@ export function ServiceDetail() {
             <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
               <Icon size={30} className="text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: 'Montserrat' }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
               {item.name}
             </h1>
           </div>

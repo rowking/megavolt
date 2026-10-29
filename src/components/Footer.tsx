@@ -5,31 +5,6 @@ import { COMPANY, SERVICES, INDUSTRIES, LOCATIONS, AUTHORITY_LOGOS, OFFICES } fr
 export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-300">
-      {/* CTA strip */}
-      <div className="bg-gradient-to-r from-amber-500 to-orange-500">
-        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>
-            <h3 className="text-2xl font-bold text-slate-900" style={{ fontFamily: 'Montserrat' }}>
-              Ready to Start Your Project?
-            </h3>
-            <p className="text-slate-800 mt-1">Free consultation. Response within 24 hours.</p>
-          </div>
-          <div className="flex gap-3">
-            <Link to="/contact" className="bg-slate-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-slate-800 transition-all">
-              Get a Free Quote
-            </Link>
-            <a
-              href={`https://wa.me/${COMPANY.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-slate-900 font-semibold px-6 py-3 rounded-lg hover:bg-slate-100 transition-all flex items-center gap-2"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Authority logos strip */}
       <div className="bg-slate-800 border-b border-slate-700">
         <div className="max-w-7xl mx-auto px-4 py-6">
@@ -62,7 +37,7 @@ export default function Footer() {
                 className="h-14 w-auto object-contain bg-white rounded-lg p-1"
               />
               <div>
-                <div className="font-bold text-white text-lg" style={{ fontFamily: 'Montserrat' }}>
+                <div className="font-bold text-white text-lg" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
                   Megavolt
                 </div>
                 <div className="text-xs text-slate-400">Technical Services Co. LLC</div>
@@ -103,6 +78,17 @@ export default function Footer() {
                     className="flex items-center gap-1 text-slate-400 hover:text-amber-400 transition-colors"
                   >
                     <ChevronRight size={14} /> {cat.category}
+                  </Link>
+                </li>
+              ))}
+              {[
+                ["/electrical-contractor-dubai", "Electrical Contractor Dubai"],
+                ["/mep-contractor-dubai", "MEP Contractor Dubai"],
+                ["/ev-charger-installation-dubai", "EV Charger Installation"],
+              ].map(([to, label]) => (
+                <li key={to}>
+                  <Link to={to} className="flex items-center gap-1 text-slate-400 hover:text-amber-400 transition-colors">
+                    <ChevronRight size={14} /> {label}
                   </Link>
                 </li>
               ))}
