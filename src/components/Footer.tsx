@@ -46,7 +46,7 @@ export default function Footer() {
             <p className="text-sm text-slate-400 leading-relaxed">
               Electrical and MEP contracting in Dubai since {COMPANY.founded}. DEWA registered
               contractor. Authority approvals through{" "}
-              <a href="https://www.uaeapprovalhub.com/" className="text-amber-400 hover:underline">UAE Approval Hub</a>.
+              <a href="https://www.uaeapprovalhub.com/" className="text-amber-400 underline underline-offset-2 hover:text-amber-300">UAE Approval Hub</a>.
             </p>
             <div className="flex gap-3 mt-4">
               {[
@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Services */}
           <div className="lg:col-span-3">
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Services</h4>
+            <h2 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Services</h2>
             <ul className="space-y-2 text-sm">
               {SERVICES.map((cat) => (
                 <li key={cat.slug}>
@@ -97,7 +97,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Industries</h4>
+            <h2 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Industries</h2>
             <ul className="space-y-2 text-sm">
               {INDUSTRIES.slice(0, 8).map((ind) => (
                 <li key={ind.slug}>
@@ -114,7 +114,7 @@ export default function Footer() {
 
           {/* Locations */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Locations</h4>
+            <h2 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Locations</h2>
             <ul className="space-y-2 text-sm">
               {LOCATIONS.map((loc) => (
                 <li key={loc.slug}>
@@ -131,7 +131,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h4>
+            <h2 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Contact</h2>
             <ul className="space-y-3 text-sm">
               {OFFICES.map((office) => (
                 <li key={office.name} className="flex items-start gap-2">

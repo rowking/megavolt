@@ -37,7 +37,7 @@ export default function Landing() {
           <Breadcrumbs items={[{ label: page.h1 }]} />
           <div className="max-w-3xl">
             <span className="eyebrow !text-amber-400 animate-fade-in-up">{page.eyebrow}</span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mt-3 mb-6 animate-fade-in-up" style={{ ...heading, animationDelay: "0.1s" }}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mt-3 mb-6" style={{ ...heading, animationDelay: "0.1s" }}>
               {page.h1}
             </h1>
             <p className="text-lg text-slate-200 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
@@ -132,20 +132,22 @@ export default function Landing() {
               <h2 className="section-heading mt-2">Our Process</h2>
             </div>
           </Reveal>
+          <div className="relative">
+          <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200" aria-hidden="true" />
           <ol className="grid md:grid-cols-5 gap-6 relative">
-            <div className="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200" aria-hidden="true" />
-            {page.steps.map((st, i) => (
-              <Reveal key={st.title} delay={i * 110}>
-                <li className="relative text-center list-none">
+                        {page.steps.map((st, i) => (
+              <li key={st.title} className="relative text-center list-none">
+                <Reveal delay={i * 110}>
                   <div className="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 text-white font-bold flex items-center justify-center shadow-lg shadow-orange-500/30 relative z-10">
                     {i + 1}
                   </div>
                   <h3 className="font-bold text-slate-900 mt-4 mb-2">{st.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">{st.desc}</p>
-                </li>
-              </Reveal>
+                </Reveal>
+              </li>
             ))}
           </ol>
+          </div>
         </div>
       </section>
 
@@ -157,12 +159,14 @@ export default function Landing() {
           </Reveal>
           <ul className="mt-10 grid sm:grid-cols-2 gap-4">
             {page.choose.points.map((pt, i) => (
-              <Reveal key={pt} delay={(i % 2) * 90}>
-                <li className="flex gap-3 rounded-xl border border-white/10 bg-white/5 p-5 text-slate-200 leading-relaxed h-full">
-                  <CheckCircle size={20} className="text-amber-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  <span>{pt}</span>
-                </li>
-              </Reveal>
+              <li key={pt} className="list-none">
+                <Reveal delay={(i % 2) * 90} className="h-full">
+                  <div className="flex gap-3 rounded-xl border border-white/10 bg-white/5 p-5 text-slate-200 leading-relaxed h-full">
+                    <CheckCircle size={20} className="text-amber-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                    <span>{pt}</span>
+                  </div>
+                </Reveal>
+              </li>
             ))}
           </ul>
         </div>
