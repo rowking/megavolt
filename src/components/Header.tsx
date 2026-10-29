@@ -12,7 +12,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -50,8 +50,8 @@ export default function Header() {
 
       {/* Main header */}
       <header
-        className={`sticky top-0 z-50 bg-white transition-all duration-300 ${
-          scrolled ? "shadow-md" : "shadow-sm"
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          scrolled ? "header-glass shadow-lg shadow-slate-900/5" : "bg-white shadow-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4">
@@ -66,7 +66,7 @@ export default function Header() {
                 className="h-14 w-auto object-contain"
               />
               <div>
-                <div className="font-bold text-slate-900 text-lg leading-none" style={{ fontFamily: 'Montserrat' }}>
+                <div className="font-bold text-slate-900 text-lg leading-none" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
                   Megavolt
                 </div>
                 <div className="text-xs text-slate-500 mt-0.5 leading-tight">

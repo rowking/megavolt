@@ -21,7 +21,7 @@ export default function Resources() {
         <HeroBackdrop variant="resources-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Resources" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Free Resources
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
@@ -62,7 +62,7 @@ export default function Resources() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4" style={{ fontFamily: 'Montserrat' }}>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
               Get All Resources in One Pack
             </h2>
             <p className="text-slate-800 text-lg mb-6">

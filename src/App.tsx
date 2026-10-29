@@ -20,6 +20,7 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import { LocationsOverview, LocationDetail } from "./pages/Locations";
 import { Privacy, Terms, Cookies, NotFound } from "./pages/Legal";
+import Landing from "./pages/Landing";
 import { applySeo } from "./seo";
 
 function RouteEffects() {
@@ -63,6 +64,9 @@ export function Site() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/electrical-contractor-dubai" element={<Landing />} />
+              <Route path="/mep-contractor-dubai" element={<Landing />} />
+              <Route path="/ev-charger-installation-dubai" element={<Landing />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </PageTransition>

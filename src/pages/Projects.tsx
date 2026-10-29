@@ -13,7 +13,7 @@ export function ProjectsOverview() {
         <HeroBackdrop variant="projects-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Projects" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Our Projects
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
@@ -91,7 +91,7 @@ export function ProjectDetail() {
           <div className="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full inline-block w-fit mb-3">
             {project.category}
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-white max-w-3xl" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-3xl md:text-5xl font-bold text-white max-w-3xl" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             {project.title}
           </h1>
           <div className="flex items-center gap-4 text-slate-300 mt-3">

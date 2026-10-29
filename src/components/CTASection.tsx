@@ -16,7 +16,7 @@ export default function CTASection({
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
       </div>
       <div className="max-w-4xl mx-auto px-4 text-center relative">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
           {title}
         </h2>
         <p className="text-slate-400 text-lg mb-8">{subtitle}</p>

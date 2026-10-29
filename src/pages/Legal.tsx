@@ -9,7 +9,7 @@ function LegalHero({ title, crumb, updated = "29 October 2026" }: { title: strin
       <HeroBackdrop variant={crumb} skylineOn={false} />
       <div className="max-w-4xl mx-auto px-4 relative z-10">
         <Breadcrumbs items={[{ label: crumb }]} />
-        <h1 className="text-4xl font-bold text-white" style={{ fontFamily: "Montserrat" }}>
+        <h1 className="text-4xl font-bold text-white" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
           {title}
         </h1>
         <p className="text-slate-300 mt-3">Last updated {updated}</p>
@@ -30,7 +30,7 @@ function Section({ h, children }: { h: string; children: React.ReactNode }) {
 export function Privacy() {
   return (
     <div>
-      <LegalHero title="Privacy Policy" crumb="Privacy Policy" />
+      <LegalHero title="Privacy Policy" crumb="Privacy Policy" updated="30 October 2026" />
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <p className="text-slate-600 leading-relaxed">
@@ -73,7 +73,7 @@ export function Privacy() {
             <p>Services we rely on to run this website and talk to you:</p>
             <ul className="list-disc pl-6 space-y-1">
               <li>Vercel (website hosting and speed measurement)</li>
-              <li>Google Maps (office maps on the Contact page) and Google Fonts (text fonts)</li>
+              <li>Google Maps (office maps on the Contact page)</li>
               <li>WhatsApp (Meta), when you message us or send the enquiry form</li>
               <li>Our email provider, when you email us</li>
             </ul>
@@ -116,7 +116,7 @@ export function Privacy() {
 export function Terms() {
   return (
     <div>
-      <LegalHero title="Terms of Use" crumb="Terms of Use" />
+      <LegalHero title="Terms of Use" crumb="Terms of Use" updated="30 October 2026" />
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <p className="text-slate-600 leading-relaxed">
@@ -138,10 +138,11 @@ export function Terms() {
           </Section>
           <Section h="Content">
             <p>
-              The text, photos and illustrations on this site belong to {COMPANY.legal} and may not be
-              copied without permission. Authority names and logos belong to their owners and are shown
-              only to identify the authorities we submit to; their use does not mean those authorities
-              endorse us.
+              The text, project photos and illustrations on this site belong to {COMPANY.legal} and may
+              not be copied without permission. Some general photos of buildings and equipment are stock
+              images used under the Unsplash licence; they illustrate types of work and are not photos of our
+              projects. Authority names and logos belong to their owners and are shown only to identify the
+              authorities we submit to; their use does not mean those authorities endorse us.
             </p>
           </Section>
           <Section h="Links">
@@ -159,7 +160,7 @@ export function Terms() {
 export function Cookies() {
   return (
     <div>
-      <LegalHero title="Cookie Policy" crumb="Cookie Policy" />
+      <LegalHero title="Cookie Policy" crumb="Cookie Policy" updated="30 October 2026" />
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <p className="text-slate-600 leading-relaxed">
@@ -180,8 +181,8 @@ export function Cookies() {
                 privacy policy at policies.google.com/privacy.
               </li>
               <li>
-                <strong>Google Fonts</strong>. Fonts load from Google's servers, which receive your IP
-                address. Google states it does not set cookies for this.
+                <strong>Fonts and images</strong>. Our fonts and photos are served from our own website, so
+                no third party receives your details when they load.
               </li>
               <li>
                 <strong>WhatsApp</strong>. Opens only when you click a WhatsApp link or send the enquiry
@@ -213,7 +214,7 @@ export function NotFound() {
     <section className="py-24 bg-white">
       <div className="max-w-xl mx-auto px-4 text-center">
         <p className="text-amber-700 font-bold">404</p>
-        <h1 className="text-3xl font-bold text-slate-900 mt-2" style={{ fontFamily: "Montserrat" }}>
+        <h1 className="text-3xl font-bold text-slate-900 mt-2" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
           This page doesn't exist
         </h1>
         <p className="text-slate-600 mt-3">It may have moved. These pages will help:</p>

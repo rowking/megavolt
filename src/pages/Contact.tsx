@@ -11,7 +11,7 @@ export default function Contact() {
         <HeroBackdrop variant="contact-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Contact" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Get In Touch
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">

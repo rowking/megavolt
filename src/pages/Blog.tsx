@@ -17,7 +17,7 @@ export function BlogOverview() {
         <HeroBackdrop variant="blog-1" />
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <Breadcrumbs items={[{ label: "Blog" }]} />
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             Knowledge Hub
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl">
@@ -122,7 +122,7 @@ export function BlogDetail() {
             <span className="flex items-center gap-1"><Calendar size={14} /> Updated {fmt(post.updated)}</span>
             <span className="flex items-center gap-1"><Clock size={14} /> {post.readTime}</span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: 'Montserrat' }}>
+          <h1 className="text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>
             {post.title}
           </h1>
         </div>

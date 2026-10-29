@@ -1,4 +1,5 @@
 import { SERVICES, INDUSTRIES, PROJECTS, BLOG_POSTS, LOCATIONS, COMPANY } from "./data/siteData";
+import { LANDING_PAGES } from "./data/landing";
 
 export const SITE = "https://megavolt.ae";
 export const OG_IMAGE = `${SITE}/og-image.png`;
@@ -17,9 +18,9 @@ const brand = "Megavolt Technical Services";
 
 const STATIC: Record<string, Omit<Seo, "indexable">> = {
   "/": {
-    title: "Megavolt Technical Services | Electrical & MEP Contractor Dubai",
+    title: "Electrical & MEP Contractor in Dubai | DEWA Registered | Megavolt",
     description:
-      "Electrical and MEP contractor in Dubai since 2020. DEWA registered contractor for load upgrades, new meters, DB works, EV chargers and fit-outs. Open 24 hours.",
+      "DEWA registered electrical and MEP contractor in Dubai since 2020: power upgrades, new meters, DB works, fit-outs, EV chargers and solar, with DEWA, RTA and DM approvals. Open 24 hours.",
   },
   "/about": {
     title: `About Us | ${brand}`,
@@ -82,6 +83,8 @@ const STATIC: Record<string, Omit<Seo, "indexable">> = {
     description: "Which cookies and third-party services the Megavolt Technical Services website uses, and how to control them.",
   },
 };
+
+for (const p of LANDING_PAGES) STATIC[p.path] = { title: p.title, description: p.description };
 
 function clip(s: string, n = 158) {
   return s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…";
