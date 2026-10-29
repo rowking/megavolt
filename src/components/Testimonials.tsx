@@ -9,7 +9,7 @@ export default function Testimonials({ limit }: { limit?: number }) {
     <section className="py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
+          <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Testimonials</span>
           <h2 className="section-heading mt-2">What Our Clients Say</h2>
           <p className="section-subheading mx-auto text-center">
             What our customers say about working with us.

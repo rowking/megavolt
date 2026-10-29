@@ -15,8 +15,8 @@ const timeline = [
 const values = [
   { icon: ShieldCheck, title: "Integrity", desc: "We do what we say. Transparent pricing, honest timelines, no hidden costs." },
   { icon: Award, title: "Excellence", desc: "Every project meets or exceeds UAE authority standards. No shortcuts." },
-  { icon: Users, title: "Client Focus", desc: "Your project's success is our success. We respond within 24 hours, every time." },
-  { icon: TrendingUp, title: "Innovation", desc: "Embracing BIM, smart building tech, and sustainable energy solutions." },
+  { icon: Users, title: "Client Focus", desc: "Your project's success is our success. We aim to reply within 24 hours." },
+  { icon: TrendingUp, title: "Innovation", desc: "Smart metering, EV charging and solar solutions for modern buildings." },
 ];
 
 export default function About() {
@@ -46,7 +46,7 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {STATS.map((s, i) => (
               <div key={i} className="text-center">
-                <div className="text-4xl font-bold text-amber-600">{s.value}</div>
+                <div className="text-4xl font-bold text-amber-700">{s.value}</div>
                 <div className="text-slate-600 mt-1">{s.label}</div>
               </div>
             ))}
@@ -60,7 +60,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-4">
-                <Eye size={28} className="text-amber-600" />
+                <Eye size={28} className="text-amber-700" />
               </div>
               <h2 className="text-2xl font-bold text-slate-900 mb-3">Our Vision</h2>
               <p className="text-slate-600 leading-relaxed">
@@ -71,7 +71,7 @@ export default function About() {
             </div>
             <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
               <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mb-4">
-                <Target size={28} className="text-amber-600" />
+                <Target size={28} className="text-amber-700" />
               </div>
               <h2 className="text-2xl font-bold text-slate-900 mb-3">Our Mission</h2>
               <p className="text-slate-600 leading-relaxed">
@@ -91,14 +91,14 @@ export default function About() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Our Values</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Our Values</span>
             <h2 className="section-heading mt-2">What Drives Us Every Day</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <div key={i} className="bg-white rounded-2xl p-6 text-center card-hover border border-slate-100">
                 <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <v.icon size={26} className="text-amber-600" />
+                  <v.icon size={26} className="text-amber-700" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{v.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{v.desc}</p>
@@ -113,7 +113,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
+              <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
               <h2 className="section-heading mt-2">Why Customers Choose Megavolt</h2>
               <div className="space-y-4 mt-8">
                 {[
@@ -143,7 +143,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Company Timeline</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Company Timeline</span>
             <h2 className="section-heading mt-2">Our Journey</h2>
           </div>
           <div className="relative">
@@ -159,7 +159,7 @@ export default function About() {
                   <item.icon size={24} className="text-white" />
                 </div>
                 <div className={`flex-1 ${i % 2 === 0 ? "md:text-right md:pr-12" : "md:pl-12"}`}>
-                  <div className="text-amber-600 font-bold text-lg">{item.year}</div>
+                  <div className="text-amber-700 font-bold text-lg">{item.year}</div>
                   <div className="text-slate-700 mt-1">{item.event}</div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function About() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Certifications & Registrations</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Certifications & Registrations</span>
             <h2 className="section-heading mt-2">Licensed & Approved</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

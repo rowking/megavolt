@@ -40,14 +40,14 @@ export default function Careers() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Why Join Us</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Why Join Us</span>
             <h2 className="section-heading mt-2">More Than a Job — a Career</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((b, i) => (
               <div key={i} className="text-center p-6 rounded-2xl hover:bg-amber-50 transition-colors">
                 <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <b.icon size={28} className="text-amber-600" />
+                  <b.icon size={28} className="text-amber-700" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{b.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{b.desc}</p>

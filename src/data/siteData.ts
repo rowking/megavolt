@@ -115,7 +115,7 @@ export const SERVICES = [
     category: "MEP Contracting",
     slug: "mep-contracting",
     icon: "Wrench",
-    description: "Full-scope MEP installation and contracting services with certified engineers.",
+    description: "Full-scope MEP installation and contracting services with qualified engineers.",
     items: [
       { name: "Electrical Installation", slug: "electrical-installation" },
       { name: "Mechanical Works", slug: "mechanical-works" },

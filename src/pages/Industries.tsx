@@ -57,7 +57,7 @@ export function IndustriesOverview() {
                     <p className="text-sm text-slate-600">
                       {INDUSTRY_CONTENT[ind.slug]?.focus[0]}.
                     </p>
-                    <span className="inline-flex items-center gap-1 text-amber-600 font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
+                    <span className="inline-flex items-center gap-1 text-amber-700 font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
                       Learn More <ArrowRight size={16} />
                     </span>
                   </div>
@@ -81,7 +81,7 @@ export function IndustryDetail() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">Industry not found</h1>
-        <Link to="/industries" className="text-amber-600 mt-4 inline-block">← Back to Industries</Link>
+        <Link to="/industries" className="text-amber-700 mt-4 inline-block">← Back to Industries</Link>
       </div>
     );
   }
@@ -143,7 +143,7 @@ export function IndustryDetail() {
               { to: "/services/mep-consultancy", label: "Electrical design and load schedules" },
               { to: "/services/fit-out-services", label: "Fit-out services" },
             ].map((l) => (
-              <Link key={l.to} to={l.to} className="flex items-center gap-2 text-slate-600 hover:text-amber-600 transition-colors">
+              <Link key={l.to} to={l.to} className="flex items-center gap-2 text-slate-600 hover:text-amber-700 transition-colors">
                 <ArrowRight size={16} className="text-amber-400" /> {l.label}
               </Link>
             ))}

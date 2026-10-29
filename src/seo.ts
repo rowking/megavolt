@@ -77,6 +77,10 @@ const STATIC: Record<string, Omit<Seo, "indexable">> = {
     title: `Terms of Use | ${brand}`,
     description: "Terms for using the Megavolt Technical Services website.",
   },
+  "/cookies": {
+    title: `Cookie Policy | ${brand}`,
+    description: "Which cookies and third-party services the Megavolt Technical Services website uses, and how to control them.",
+  },
 };
 
 function clip(s: string, n = 158) {

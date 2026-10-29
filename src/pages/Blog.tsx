@@ -48,11 +48,11 @@ export function BlogOverview() {
                   </span>
                   <span className="flex items-center gap-1"><Clock size={14} /> {BLOG_POSTS[0].readTime}</span>
                 </div>
-                <h2 className="text-2xl font-bold text-slate-900 group-hover:text-amber-600 transition-colors mb-3">
+                <h2 className="text-2xl font-bold text-slate-900 group-hover:text-amber-700 transition-colors mb-3">
                   {BLOG_POSTS[0].title}
                 </h2>
                 <p className="text-slate-600 leading-relaxed">{BLOG_POSTS[0].excerpt}</p>
-                <span className="inline-flex items-center gap-1 text-amber-600 font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-amber-700 font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
                   Read Article <ArrowRight size={16} />
                 </span>
               </div>
@@ -78,7 +78,7 @@ export function BlogOverview() {
                     <span className="flex items-center gap-1"><Calendar size={12} /> Updated {fmt(post.updated)}</span>
                     <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
                   </div>
-                  <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors mb-2">
+                  <h3 className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors mb-2">
                     {post.title}
                   </h3>
                   <p className="text-sm text-slate-600 line-clamp-2">{post.excerpt}</p>
@@ -102,7 +102,7 @@ export function BlogDetail() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">Article not found</h1>
-        <Link to="/blog" className="text-amber-600 mt-4 inline-block">← Back to Blog</Link>
+        <Link to="/blog" className="text-amber-700 mt-4 inline-block">← Back to Blog</Link>
       </div>
     );
   }
@@ -192,7 +192,7 @@ export function BlogDetail() {
                   <CardArt seed={p.slug} icon={blogIcon(p.category)} />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors text-sm">{p.title}</h3>
+                  <h3 className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors text-sm">{p.title}</h3>
                   <div className="flex items-center gap-1 text-xs text-slate-500 mt-2">
                     <Clock size={12} /> {p.readTime}
                   </div>

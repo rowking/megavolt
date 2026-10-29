@@ -83,7 +83,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Reveal direction="left">
-              <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Who We Are</span>
+              <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Who We Are</span>
               <h2 className="section-heading mt-2">
                 Engineering Excellence. Authority Expertise. One Trusted Partner.
               </h2>
@@ -142,7 +142,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <Reveal>
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">What We Do</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">What We Do</span>
             <h2 className="section-heading mt-2">Complete MEP, Approval & Fit-out Services</h2>
             <p className="section-subheading mx-auto text-center">
               Six service divisions covering every aspect of MEP engineering, authority compliance,
@@ -177,7 +177,7 @@ export default function Home() {
                       </span>
                     )}
                   </div>
-                  <span className="inline-flex items-center gap-1 text-amber-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center gap-1 text-amber-700 font-semibold text-sm group-hover:gap-2 transition-all">
                     Explore {cat.category} <ArrowRight size={16} />
                   </span>
                 </Link>
@@ -192,7 +192,7 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Why Trust Us</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Why Trust Us</span>
             <h2 className="section-heading mt-2">Built on Expertise, Trust & Authority</h2>
             <p className="section-subheading mx-auto text-center">
               What you can expect when you work with us.
@@ -225,7 +225,7 @@ export default function Home() {
               <Reveal key={i} delay={i * 100}>
               <div className="text-center p-6 rounded-2xl hover:bg-amber-50 transition-colors tilt-hover h-full">
                 <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <item.icon size={28} className="text-amber-600" />
+                  <item.icon size={28} className="text-amber-700" />
                 </div>
                 <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
@@ -243,7 +243,7 @@ export default function Home() {
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Industries We Serve</span>
+            <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Industries We Serve</span>
             <h2 className="section-heading mt-2">Specialised Expertise for Every Sector</h2>
             <p className="section-subheading mx-auto text-center">
               We understand the unique compliance, design, and operational requirements of each industry.
@@ -280,7 +280,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Completed Projects</span>
+              <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Completed Projects</span>
               <h2 className="section-heading mt-2">Recent Work</h2>
             </div>
             <Link to="/projects" className="btn-outline">
@@ -302,7 +302,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                  <h3 className="font-bold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
                     {p.title}
                   </h3>
                   <div className="flex items-center gap-1.5 text-sm text-slate-500 mb-3">
@@ -330,7 +330,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <span className="text-amber-600 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+              <span className="text-amber-700 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
               <h2 className="section-heading mt-2">Start Your Project Today</h2>
               <p className="text-slate-600 text-lg mt-4">
                 Tell us about your project and get a free consultation. We are open 24 hours.
@@ -339,18 +339,18 @@ export default function Home() {
               <div className="space-y-4 mt-8">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                    <Phone size={22} className="text-amber-600" />
+                    <Phone size={22} className="text-amber-700" />
                   </div>
                   <div>
                     <div className="text-sm text-slate-500">Call Us</div>
-                    <a href={`tel:${COMPANY.phone}`} className="font-bold text-slate-900 hover:text-amber-600 transition-colors">
+                    <a href={`tel:${COMPANY.phone}`} className="font-bold text-slate-900 hover:text-amber-700 transition-colors">
                       {COMPANY.phone}
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                    <MapPin size={22} className="text-amber-600" />
+                    <MapPin size={22} className="text-amber-700" />
                   </div>
                   <div>
                     {OFFICES.map((office) => (
@@ -368,7 +368,7 @@ export default function Home() {
                 <p className="text-sm text-slate-600">
                   Electrical emergency? Call our 24-hour line:
                 </p>
-                <a href={`tel:${COMPANY.phone}`} className="text-amber-600 font-bold text-lg mt-1 inline-block">
+                <a href={`tel:${COMPANY.phone}`} className="text-amber-700 font-bold text-lg mt-1 inline-block">
                   {COMPANY.phone}
                 </a>
               </div>

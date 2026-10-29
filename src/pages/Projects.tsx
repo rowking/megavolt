@@ -39,7 +39,7 @@ export function ProjectsOverview() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">
+                  <h3 className="font-bold text-slate-900 mb-2 group-hover:text-amber-700 transition-colors">
                     {p.title}
                   </h3>
                   <div className="flex items-center gap-1.5 text-sm text-slate-500 mb-3">
@@ -71,7 +71,7 @@ export function ProjectDetail() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">Project not found</h1>
-        <Link to="/projects" className="text-amber-600 mt-4 inline-block">← Back to Projects</Link>
+        <Link to="/projects" className="text-amber-700 mt-4 inline-block">← Back to Projects</Link>
       </div>
     );
   }
@@ -162,7 +162,7 @@ export function ProjectDetail() {
           {project.service && (
             <p className="mt-8 text-slate-700">
               Related service:{" "}
-              <Link to={project.service.path} className="text-amber-600 font-semibold hover:underline">
+              <Link to={project.service.path} className="text-amber-700 font-semibold hover:underline">
                 {project.service.label}
               </Link>
             </p>
@@ -193,7 +193,7 @@ export function ProjectDetail() {
                   <ProjectThumb project={p} />
                 </div>
                 <div className="p-4">
-                  <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors text-sm">{p.title}</h3>
+                  <h3 className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors text-sm">{p.title}</h3>
                   <div className="flex items-center gap-1 text-xs text-slate-500 mt-1">
                     <MapPin size={12} /> {p.location}
                   </div>
