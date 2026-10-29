@@ -174,13 +174,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
           <div>
             © {new Date().getFullYear()} {COMPANY.brand}. All rights reserved. | {COMPANY.legal}
           </div>
           <div className="flex items-center gap-4">
             <Link to="/privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-amber-400 transition-colors">Terms of Use</Link>
+            <Link to="/cookies" className="hover:text-amber-400 transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

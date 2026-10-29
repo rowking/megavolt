@@ -5,7 +5,7 @@ export default function AuthorityLogos({ dark = false }: { dark?: boolean }) {
     <section className={dark ? "py-14 bg-slate-900" : "py-14 bg-white border-t border-slate-100"}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-2 ${dark ? "text-amber-400" : "text-amber-600"}`}>
+          <p className={`text-xs font-bold uppercase tracking-[0.2em] mb-2 ${dark ? "text-amber-400" : "text-amber-700"}`}>
             Authority Submissions
           </p>
           <h3 className={`text-xl md:text-2xl font-bold ${dark ? "text-white" : "text-slate-900"}`} style={{ fontFamily: 'Montserrat' }}>
@@ -32,7 +32,7 @@ export default function AuthorityLogos({ dark = false }: { dark?: boolean }) {
                   style={{ maxHeight: '52px' }}
                 />
               </div>
-              <span className={`text-xs font-semibold text-center leading-tight ${dark ? "text-slate-400 group-hover:text-amber-400" : "text-slate-500 group-hover:text-amber-600"} transition-colors`}>
+              <span className={`text-xs font-semibold text-center leading-tight ${dark ? "text-slate-400 group-hover:text-amber-400" : "text-slate-500 group-hover:text-amber-700"} transition-colors`}>
                 {auth.short}
               </span>
             </div>

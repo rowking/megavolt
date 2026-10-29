@@ -33,14 +33,14 @@ export function LocationsOverview() {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                    <MapPin size={20} className="text-amber-600" />
+                    <MapPin size={20} className="text-amber-700" />
                   </div>
-                  <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
+                  <h3 className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
                     {loc.city}
                   </h3>
                 </div>
                 <p className="text-sm text-slate-600">{loc.description}</p>
-                <span className="inline-flex items-center gap-1 text-amber-600 font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-amber-700 font-semibold text-sm mt-3 group-hover:gap-2 transition-all">
                   View Services <ArrowRight size={16} />
                 </span>
               </Link>
@@ -62,7 +62,7 @@ export function LocationDetail() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">Location not found</h1>
-        <Link to="/locations" className="text-amber-600 mt-4 inline-block">← Back to Locations</Link>
+        <Link to="/locations" className="text-amber-700 mt-4 inline-block">← Back to Locations</Link>
       </div>
     );
   }
@@ -100,7 +100,7 @@ export function LocationDetail() {
               <Link
                 key={cat.slug}
                 to={`/services/${cat.slug}`}
-                className="flex items-center gap-2 text-slate-600 hover:text-amber-600 transition-colors"
+                className="flex items-center gap-2 text-slate-600 hover:text-amber-700 transition-colors"
               >
                 <ChevronRight size={16} className="text-amber-400" /> {cat.category}
               </Link>

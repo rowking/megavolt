@@ -58,7 +58,7 @@ export function ServicesOverview() {
                     >
                       <div className="flex items-center gap-3">
                         <ChevronRight size={18} className="text-amber-400 group-hover:translate-x-1 transition-transform" />
-                        <span className="font-medium text-slate-800 group-hover:text-amber-600 transition-colors">
+                        <span className="font-medium text-slate-800 group-hover:text-amber-700 transition-colors">
                           {item.name}
                         </span>
                       </div>
@@ -85,7 +85,7 @@ export function ServiceCategory() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">Service category not found</h1>
-        <Link to="/services" className="text-amber-600 mt-4 inline-block">← Back to Services</Link>
+        <Link to="/services" className="text-amber-700 mt-4 inline-block">← Back to Services</Link>
       </div>
     );
   }
@@ -121,9 +121,9 @@ export function ServiceCategory() {
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
-                    <ChevronRight size={18} className="text-amber-600" />
+                    <ChevronRight size={18} className="text-amber-700" />
                   </div>
-                  <h3 className="font-bold text-slate-900 group-hover:text-amber-600 transition-colors">
+                  <h3 className="font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
                     {item.name}
                   </h3>
                 </div>
@@ -131,7 +131,7 @@ export function ServiceCategory() {
                   Professional {item.name.toLowerCase()} services in Dubai. Fully compliant with
                   all UAE authority requirements.
                 </p>
-                <span className="inline-flex items-center gap-1 text-amber-600 font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-amber-700 font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
                   Learn More <ArrowRight size={16} />
                 </span>
               </Link>
@@ -157,7 +157,7 @@ export function ServiceDetail() {
     return (
       <div className="py-20 text-center">
         <h1 className="text-2xl font-bold text-slate-900">Service not found</h1>
-        <Link to="/services" className="text-amber-600 mt-4 inline-block">← Back to Services</Link>
+        <Link to="/services" className="text-amber-700 mt-4 inline-block">← Back to Services</Link>
       </div>
     );
   }
@@ -261,7 +261,7 @@ export function ServiceDetail() {
                 <Link
                   key={i.slug}
                   to={`/services/${cat.slug}/${i.slug}`}
-                  className="flex items-center gap-2 text-slate-600 hover:text-amber-600 transition-colors"
+                  className="flex items-center gap-2 text-slate-600 hover:text-amber-700 transition-colors"
                 >
                   <ChevronRight size={16} className="text-amber-400" /> {i.name}
                 </Link>

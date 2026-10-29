@@ -27,7 +27,7 @@ export default function Contact() {
             <div className="space-y-4">
               <a href={`tel:${COMPANY.phone}`} className="bg-white rounded-2xl p-6 border border-slate-100 card-hover flex items-center gap-4">
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                  <Phone size={22} className="text-amber-600" />
+                  <Phone size={22} className="text-amber-700" />
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Call Us</div>
@@ -47,7 +47,7 @@ export default function Contact() {
 
               <a href={`mailto:${COMPANY.email}`} className="bg-white rounded-2xl p-6 border border-slate-100 card-hover flex items-center gap-4">
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                  <Mail size={22} className="text-amber-600" />
+                  <Mail size={22} className="text-amber-700" />
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Email Us</div>
@@ -57,7 +57,7 @@ export default function Contact() {
 
               <div className="bg-white rounded-2xl p-6 border border-slate-100 flex items-start gap-4">
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin size={22} className="text-amber-600" />
+                  <MapPin size={22} className="text-amber-700" />
                 </div>
                 <div>
                   {OFFICES.map((office) => (
@@ -71,7 +71,7 @@ export default function Contact() {
 
               <div className="bg-white rounded-2xl p-6 border border-slate-100 flex items-start gap-4">
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Clock size={22} className="text-amber-600" />
+                  <Clock size={22} className="text-amber-700" />
                 </div>
                 <div>
                   <div className="text-sm text-slate-500">Business Hours</div>
@@ -107,7 +107,7 @@ export default function Contact() {
                     <h3 className="font-bold text-slate-900">{office.name}</h3>
                     <p className="text-sm text-slate-600 mt-1">{office.address}</p>
                   </div>
-                  <a href={office.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-amber-600 font-semibold hover:underline whitespace-nowrap">
+                  <a href={office.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-amber-700 font-semibold hover:underline whitespace-nowrap">
                     Directions
                   </a>
                 </div>

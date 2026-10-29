@@ -19,7 +19,7 @@ import FAQ from "./pages/FAQ";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import { LocationsOverview, LocationDetail } from "./pages/Locations";
-import { Privacy, Terms, NotFound } from "./pages/Legal";
+import { Privacy, Terms, Cookies, NotFound } from "./pages/Legal";
 import { applySeo } from "./seo";
 
 function RouteEffects() {
@@ -38,8 +38,9 @@ export function Site() {
       <RouteEffects />
       <ScrollProgress />
       <div className="min-h-screen flex flex-col bg-white">
+        <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-amber-500 focus:text-slate-900 focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">Skip to main content</a>
         <Header />
-        <main className="flex-1">
+        <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
           <PageTransition>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -61,6 +62,7 @@ export function Site() {
               <Route path="/locations/:slug" element={<LocationDetail />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </PageTransition>

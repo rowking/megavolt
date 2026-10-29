@@ -77,10 +77,10 @@ export default function Header() {
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-1">
-              <Link to="/" className={`nav-link px-3 py-2 ${isActive("/") ? "text-amber-600" : ""}`}>
+              <Link to="/" className={`nav-link px-3 py-2 ${isActive("/") ? "text-amber-700" : ""}`}>
                 Home
               </Link>
-              <Link to="/about" className={`nav-link px-3 py-2 ${isActive("/about") ? "text-amber-600" : ""}`}>
+              <Link to="/about" className={`nav-link px-3 py-2 ${isActive("/about") ? "text-amber-700" : ""}`}>
                 About
               </Link>
 
@@ -90,7 +90,7 @@ export default function Header() {
                 onMouseEnter={() => setMegaMenuOpen("services")}
                 onMouseLeave={() => setMegaMenuOpen(null)}
               >
-                <button className={`nav-link px-3 py-2 flex items-center gap-1 ${location.pathname.startsWith("/services") ? "text-amber-600" : ""}`}>
+                <button className={`nav-link px-3 py-2 flex items-center gap-1 ${location.pathname.startsWith("/services") ? "text-amber-700" : ""}`}>
                   Services <ChevronDown size={16} className={`transition-transform ${megaMenuOpen === "services" ? "rotate-180" : ""}`} />
                 </button>
                 {megaMenuOpen === "services" && (
@@ -100,7 +100,7 @@ export default function Header() {
                         <div key={cat.slug}>
                           <Link
                             to={`/services/${cat.slug}`}
-                            className="flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-600 mb-2 px-3"
+                            className="flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-amber-700 mb-2 px-3"
                           >
                             {cat.category}
                           </Link>
@@ -117,7 +117,7 @@ export default function Header() {
                             {cat.items.length > 7 && (
                               <Link
                                 to={`/services/${cat.slug}`}
-                                className="mega-menu-item text-amber-600 font-medium"
+                                className="mega-menu-item text-amber-700 font-medium"
                               >
                                 View all ({cat.items.length})
                               </Link>
@@ -130,22 +130,22 @@ export default function Header() {
                 )}
               </div>
 
-              <Link to="/industries" className={`nav-link px-3 py-2 ${location.pathname.startsWith("/industries") ? "text-amber-600" : ""}`}>
+              <Link to="/industries" className={`nav-link px-3 py-2 ${location.pathname.startsWith("/industries") ? "text-amber-700" : ""}`}>
                 Industries
               </Link>
-              <Link to="/projects" className={`nav-link px-3 py-2 ${location.pathname.startsWith("/projects") ? "text-amber-600" : ""}`}>
+              <Link to="/projects" className={`nav-link px-3 py-2 ${location.pathname.startsWith("/projects") ? "text-amber-700" : ""}`}>
                 Projects
               </Link>
-              <Link to="/blog" className={`nav-link px-3 py-2 ${location.pathname.startsWith("/blog") ? "text-amber-600" : ""}`}>
+              <Link to="/blog" className={`nav-link px-3 py-2 ${location.pathname.startsWith("/blog") ? "text-amber-700" : ""}`}>
                 Blog
               </Link>
-              <Link to="/resources" className={`nav-link px-3 py-2 ${isActive("/resources") ? "text-amber-600" : ""}`}>
+              <Link to="/resources" className={`nav-link px-3 py-2 ${isActive("/resources") ? "text-amber-700" : ""}`}>
                 Resources
               </Link>
-              <Link to="/faq" className={`nav-link px-3 py-2 ${isActive("/faq") ? "text-amber-600" : ""}`}>
+              <Link to="/faq" className={`nav-link px-3 py-2 ${isActive("/faq") ? "text-amber-700" : ""}`}>
                 FAQ
               </Link>
-              <Link to="/contact" className={`nav-link px-3 py-2 ${isActive("/contact") ? "text-amber-600" : ""}`}>
+              <Link to="/contact" className={`nav-link px-3 py-2 ${isActive("/contact") ? "text-amber-700" : ""}`}>
                 Contact
               </Link>
             </nav>

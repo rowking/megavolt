@@ -40,7 +40,7 @@ export default function Resources() {
                 <div key={i} className="bg-white rounded-2xl p-6 shadow-sm card-hover border border-slate-100 group">
                   <div className="flex items-start justify-between mb-4">
                     <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-                      <Icon size={24} className="text-amber-600" />
+                      <Icon size={24} className="text-amber-700" />
                     </div>
                     <span className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-medium">
                       {r.type}
@@ -48,7 +48,7 @@ export default function Resources() {
                   </div>
                   <h3 className="font-bold text-slate-900 mb-2">{r.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed mb-4">{r.description}</p>
-                  <button className="inline-flex items-center gap-2 text-amber-600 font-semibold text-sm hover:gap-3 transition-all">
+                  <button className="inline-flex items-center gap-2 text-amber-700 font-semibold text-sm hover:gap-3 transition-all">
                     <Download size={16} /> Download Free
                   </button>
                 </div>
