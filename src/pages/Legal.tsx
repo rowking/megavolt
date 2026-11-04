@@ -30,7 +30,7 @@ function Section({ h, children }: { h: string; children: React.ReactNode }) {
 export function Privacy() {
   return (
     <div>
-      <LegalHero title="Privacy Policy" crumb="Privacy Policy" updated="30 October 2026" />
+      <LegalHero title="Privacy Policy" crumb="Privacy Policy" updated="4 November 2026" />
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <p className="text-slate-600 leading-relaxed">
@@ -53,8 +53,9 @@ export function Privacy() {
             <p>
               <strong>Technical data.</strong> Our hosting provider records standard technical information,
               such as your IP address, browser type and the pages requested, to deliver the site and keep it
-              secure. We also use Vercel Speed Insights, which measures page speed using anonymous data and
-              does not use cookies.
+              secure. We also use Vercel Web Analytics, which counts visits and pages viewed using anonymous,
+              aggregated data, and Vercel Speed Insights, which measures page speed. Neither uses cookies or
+              identifies individual visitors.
             </p>
           </Section>
           <Section h="How we use it">
@@ -72,7 +73,7 @@ export function Privacy() {
             </p>
             <p>Services we rely on to run this website and talk to you:</p>
             <ul className="list-disc pl-6 space-y-1">
-              <li>Vercel (website hosting and speed measurement)</li>
+              <li>Vercel (website hosting, anonymous visitor statistics and speed measurement)</li>
               <li>Google Maps (office maps on the Contact page)</li>
               <li>WhatsApp (Meta), when you message us or send the enquiry form</li>
               <li>Our email provider, when you email us</li>
@@ -160,7 +161,7 @@ export function Terms() {
 export function Cookies() {
   return (
     <div>
-      <LegalHero title="Cookie Policy" crumb="Cookie Policy" updated="30 October 2026" />
+      <LegalHero title="Cookie Policy" crumb="Cookie Policy" updated="4 November 2026" />
       <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <p className="text-slate-600 leading-relaxed">
@@ -170,7 +171,8 @@ export function Cookies() {
           <Section h="Our own cookies">
             <p>
               None. This website does not set its own cookies and does not use advertising or analytics
-              cookies. Page speed is measured with Vercel Speed Insights, which does not use cookies.
+              cookies. Visits and page speed are measured with Vercel Web Analytics and Speed Insights, which use
+              anonymous, aggregated data and do not use cookies.
             </p>
           </Section>
           <Section h="Third-party services">

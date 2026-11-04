@@ -9,12 +9,14 @@ import '@fontsource/montserrat/700.css';
 import '@fontsource/montserrat/800.css';
 import './index.css';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 const container = document.getElementById('root')!;
 const app = (
   <StrictMode>
     <App />
     <SpeedInsights />
+    <Analytics />
   </StrictMode>
 );
 
