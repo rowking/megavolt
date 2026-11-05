@@ -191,6 +191,9 @@ export const LANDING_PAGES: LandingPage[] = [
       { q: "Can my villa supply handle an EV charger?", a: "Often yes, but a home charger is a large continuous load. We check the board and supply first; if there is not enough spare capacity, a DEWA load increase is needed before installation." },
       { q: "Can I plug my EV into a normal socket?", a: "Not for regular charging. Ordinary sockets and circuits are not designed for hours of high continuous current. A dedicated charger circuit with the correct protection is the safe option." },
       { q: "Do you install chargers in malls and offices?", a: "Yes. We have installed floor-standing fast chargers in a shopping centre car park and wall chargers in residential buildings, and we plan load and metering for multiple chargers." },
+      { q: "Which charger rating is right for a villa?", a: "A 7 kW single-phase wall charger is the usual choice for a villa. Faster three-phase chargers need a three-phase supply with enough spare capacity, so we check the board and supply before recommending a rating." },
+      { q: "How many chargers can an office or apartment building install?", a: "It depends on the building's spare capacity. In shared buildings, building management must agree the location, cable route and metering, and load management lets several chargers share a limited supply without a large upgrade." },
+      { q: "What protection does an EV charger circuit need?", a: "A dedicated circuit with the correct cable size, protection suitable for EV charging including residual current protection, and checked and tested earthing. You receive a test certificate at handover." },
     ],
   },
 ];

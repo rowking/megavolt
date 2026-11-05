@@ -503,16 +503,6 @@ export const BLOG_POSTS = [
     readTime: "3 min read",
   },
   {
-    id: 3,
-    title: "EV Charger Installation in Dubai: What to Check Before You Buy",
-    slug: "ev-charger-installation-requirements-dubai",
-    category: "EV Solutions",
-    excerpt: "Everything you need to know about installing EV chargers in Dubai, from DEWA technical requirements to the approval process.",
-    date: "2024-02-28",
-    updated: "2026-10-20",
-    readTime: "4 min read",
-  },
-  {
     id: 4,
     title: "Office Fit-out Approval in Dubai: Municipality & DCD Checklist",
     slug: "office-fit-out-approval-dubai-checklist",
