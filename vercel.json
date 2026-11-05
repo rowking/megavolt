@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog/ev-charger-installation-requirements-dubai",
+      "destination": "/ev-charger-installation-dubai",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.megavolt.ae" }],
       "destination": "https://megavolt.ae/:path*",

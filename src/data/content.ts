@@ -294,40 +294,6 @@ export const BLOG_CONTENT: Record<string, BlogSection[]> = {
       ],
     },
   ],
-  "ev-charger-installation-requirements-dubai": [
-    {
-      h: "Check before you buy a charger",
-      p: [
-        "Buying a charger first and asking about the installation later is the most common EV mistake we see. Three questions decide what you can install.",
-      ],
-      list: [
-        "Can the existing distribution board carry the extra load? Sometimes a DEWA load increase is needed first.",
-        "Does the charger model meet DEWA's requirements for chargers connected to its network?",
-        "In an apartment or managed building, will building management issue a NOC?",
-      ],
-    },
-    {
-      h: "Villas",
-      p: [
-        "In a villa the main question is the supply. A 7 kW single-phase charger is the usual choice; faster three-phase chargers need a three-phase supply and enough spare capacity. We check the board and the supply before recommending a rating.",
-      ],
-    },
-    {
-      h: "Apartments and workplaces",
-      p: [
-        "In shared buildings the charger is fed from the building's supply, so building management has to agree to the location, the cable route and the metering. For workplaces with several chargers, load management lets more chargers share a limited supply.",
-      ],
-    },
-    {
-      h: "Installation",
-      list: [
-        "Dedicated circuit with the correct cable size",
-        "Protection suitable for EV charging, including residual current protection",
-        "Earthing checked and tested",
-        "Test certificate at handover",
-      ],
-    },
-  ],
   "office-fit-out-approval-dubai-checklist": [
     {
       h: "1. Confirm which authority regulates the building",
