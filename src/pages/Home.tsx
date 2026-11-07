@@ -297,11 +297,12 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2" style={{ fontFamily: "Montserrat, Inter, system-ui, sans-serif" }}>What Clients Ask Us For</h2>
           </div>
           </Reveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {[
               { to: "/electrical-contractor-dubai", icon: Zap, title: "Electrical Contractor Dubai", desc: "DB and panel works, power upgrades, meters and wiring by a DEWA registered contractor." },
               { to: "/mep-contractor-dubai", icon: Wrench, title: "MEP Contractor Dubai", desc: "Electrical, AC, plumbing and fire works with the approvals coordinated by one team." },
               { to: "/ev-charger-installation-dubai", icon: Plug, title: "EV Charger Installation", desc: "Home and commercial chargers: load check, DEWA requirements, NOC and safe installation." },
+              { to: "/power-upgrade-dubai", icon: TrendingUp, title: "Power Upgrade & Load Increase", desc: "More load from DEWA and a bigger board for new ACs, kitchens, machines or EV chargers." },
               { to: "/services/authority-approvals", icon: ShieldCheck, title: "DEWA, RTA & DM Approvals", desc: "Drawings and submissions for DEWA, RTA NOC, Dubai Municipality and Civil Defence." },
             ].map((c, i) => (
               <Reveal key={c.to} delay={i * 90}>

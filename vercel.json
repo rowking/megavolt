@@ -4,6 +4,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/blog/electrical-load-upgrade-dubai",
+      "destination": "/power-upgrade-dubai",
+      "permanent": true
+    },
+    {
       "source": "/blog/ev-charger-installation-requirements-dubai",
       "destination": "/ev-charger-installation-dubai",
       "permanent": true

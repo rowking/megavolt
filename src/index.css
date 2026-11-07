@@ -477,3 +477,9 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Stop slide-in animations from making the page wider than the screen on phones. clip keeps sticky headers working. */
+html,
+body {
+  overflow-x: clip;
+}

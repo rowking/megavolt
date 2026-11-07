@@ -331,32 +331,6 @@ export const BLOG_CONTENT: Record<string, BlogSection[]> = {
       ],
     },
   ],
-  "electrical-load-upgrade-dubai": [
-    {
-      h: "Signs you need more load",
-      list: [
-        "The main breaker trips when several AC units run together",
-        "You are adding a pool, an EV charger, a kitchen or production equipment",
-        "The building's approved load for your unit is lower than the new equipment needs",
-      ],
-    },
-    {
-      h: "How a DEWA load increase works",
-      list: [
-        "A DEWA-enrolled contractor surveys the site and calculates the new load",
-        "A revised load schedule and drawings are prepared",
-        "The application is submitted to DEWA, with a landlord or developer NOC where required",
-        "DEWA approves the design and issues its invoice",
-        "The works are completed and DEWA inspects before the new load is released",
-      ],
-    },
-    {
-      h: "What it costs",
-      p: [
-        "There are two parts: DEWA's own charges, which DEWA bills directly, and the contractor's cost for drawings, submission and site work. The site work depends on whether the existing cables and boards can be kept or need replacing, so we quote after a survey.",
-      ],
-    },
-  ],
   "warehouse-fit-out-guide-dubai-jafza": [
     {
       h: "Which authority approves your warehouse",

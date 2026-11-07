@@ -513,16 +513,6 @@ export const BLOG_POSTS = [
     readTime: "3 min read",
   },
   {
-    id: 5,
-    title: "Electrical Load Upgrade in Dubai: When Do You Need It and How to Get It",
-    slug: "electrical-load-upgrade-dubai",
-    category: "MEP Contracting",
-    excerpt: "Signs your Dubai property needs an electrical load upgrade, the DEWA process, costs, and timelines explained.",
-    date: "2024-02-12",
-    updated: "2026-10-20",
-    readTime: "3 min read",
-  },
-  {
     id: 6,
     title: "Warehouse Fit-out Guide for Dubai & JAFZA: Approvals, MEP & Timeline",
     slug: "warehouse-fit-out-guide-dubai-jafza",
