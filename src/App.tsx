@@ -67,6 +67,7 @@ export function Site() {
               <Route path="/electrical-contractor-dubai" element={<Landing />} />
               <Route path="/mep-contractor-dubai" element={<Landing />} />
               <Route path="/ev-charger-installation-dubai" element={<Landing />} />
+              <Route path="/power-upgrade-dubai" element={<Landing />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </PageTransition>

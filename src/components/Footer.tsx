@@ -85,6 +85,7 @@ export default function Footer() {
                 ["/electrical-contractor-dubai", "Electrical Contractor Dubai"],
                 ["/mep-contractor-dubai", "MEP Contractor Dubai"],
                 ["/ev-charger-installation-dubai", "EV Charger Installation"],
+                ["/power-upgrade-dubai", "Power Upgrade & Load Increase"],
               ].map(([to, label]) => (
                 <li key={to}>
                   <Link to={to} className="flex items-center gap-1 text-slate-400 hover:text-amber-400 transition-colors">
