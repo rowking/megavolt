@@ -148,6 +148,8 @@ export type LocationContent = {
   intro: string;
   authorityNote: string;
   points: string[];
+  steps?: string[];
+  documents?: string[];
 };
 
 export const LOCATION_CONTENT: Record<string, LocationContent> = {
@@ -197,6 +199,21 @@ export const LOCATION_CONTENT: Record<string, LocationContent> = {
       "Trakhees and DEWA submissions",
       "Work planned to keep operations running",
       "Available 24 hours for urgent electrical work",
+    ],
+    steps: [
+      "Confirm the authority. Your affection plan and JAFZA lease show that the unit is under Trakhees (Ports, Customs and Free Zone Corporation). DEWA supplies the electricity.",
+      "Site survey and load calculation. We record the existing main distribution board, meter and incoming cable, list the new equipment with its ratings and work out the load you need.",
+      "Trakhees modification permit. Trakhees requires a Civil Engineering Department modification NOC or permit before any modification or fit-out work starts. Applications are made online at online.trakhees.ae.",
+      "DEWA approval. For free zone projects, DEWA processes the electricity NOC on its own website, not through the Dubai Municipality system. We submit the load schedule and single line diagram for the load or meter change.",
+      "Installation, testing and inspection. We carry out the panel and cable works, test them and arrange the DEWA inspection before the supply is released. At the end, Trakhees issues a Modification Completion Certificate.",
+    ],
+    documents: [
+      "Trade licence and JAFZA lease or affection plan",
+      "Landlord or JAFZA NOC for the works, where required",
+      "DEWA premise or account number",
+      "Existing as-built single line diagram and load schedule, if available",
+      "List of existing and new equipment with ratings",
+      "Photos of the main distribution board, meter and incoming supply",
     ],
   },
   "dubai-south": {

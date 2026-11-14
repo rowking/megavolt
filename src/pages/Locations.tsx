@@ -117,6 +117,31 @@ export function LocationDetail() {
             ))}
           </div>
 
+          {content.steps && (
+            <>
+              <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">How Approval Works in {location.city}</h2>
+              <ol className="list-decimal pl-6 space-y-2 text-slate-700">
+                {content.steps.map((step, i) => (
+                  <li key={i}>{step}</li>
+                ))}
+              </ol>
+              <p className="text-slate-500 text-sm mt-3">
+                Approval times and outcomes are decided by Trakhees and DEWA. We confirm the likely path after the site survey.
+              </p>
+            </>
+          )}
+
+          {content.documents && (
+            <>
+              <h2 className="text-2xl font-bold text-slate-900 mt-8 mb-4">Documents to Prepare</h2>
+              <ul className="list-disc pl-6 space-y-1 text-slate-700">
+                {content.documents.map((doc, i) => (
+                  <li key={i}>{doc}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
           <div className="mt-8 bg-amber-50 rounded-2xl p-6 border border-amber-100">
             <h3 className="font-bold text-slate-900 mb-2">Need a Service in {location.city}?</h3>
             <p className="text-slate-600 text-sm mb-4">Call us or send an enquiry for a free consultation.</p>
