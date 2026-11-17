@@ -10,6 +10,9 @@ import '@fontsource/montserrat/800.css';
 import './index.css';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
+import { initLeadTracking } from './leadTracking';
+
+initLeadTracking();
 
 const container = document.getElementById('root')!;
 const app = (

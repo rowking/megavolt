@@ -2,6 +2,7 @@ import { useId, useState } from "react";
 import { Link } from "react-router-dom";
 import { Send, CheckCircle, Mail } from "lucide-react";
 import { COMPANY } from "../data/siteData";
+import { trackLead } from "../leadTracking";
 
 type Sent = { text: string; mailto: string };
 
@@ -28,6 +29,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
     ].filter(Boolean) as string[];
     const text = lines.join("\n");
     const mailto = `mailto:${COMPANY.email}?subject=${encodeURIComponent(`Website enquiry: ${v("service")}`)}&body=${encodeURIComponent(text)}`;
+    trackLead("form_submit", compact ? "form_compact" : "form");
     window.open(`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     setSent({ text, mailto });
   };
