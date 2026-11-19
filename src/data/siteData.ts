@@ -131,7 +131,7 @@ export const SERVICES = [
     category: "Fit-out Services",
     slug: "fit-out-services",
     icon: "Building2",
-    description: "Premium commercial and residential fit-out solutions delivered on time and budget.",
+    description: "Commercial and residential fit-outs, planned around your schedule with clear quotations.",
     items: [
       { name: "Office Fit-out", slug: "office-fit-out" },
       { name: "Restaurant Fit-out", slug: "restaurant-fit-out" },
@@ -159,7 +159,7 @@ export const SERVICES = [
     category: "Solar Solutions",
     slug: "solar-solutions",
     icon: "Sun",
-    description: "DEWA-approved solar PV design, permitting, and installation across Dubai.",
+    description: "Solar PV design and installation across Dubai, including the DEWA Shams Dubai connection process.",
     items: [
       { name: "Solar PV Design", slug: "solar-pv-design" },
       { name: "DEWA Solar Approval", slug: "dewa-solar-approval" },
